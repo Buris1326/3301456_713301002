@@ -37,6 +37,9 @@ class sutHelvasi extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
+
+
+
             Text(
               sayfaNesne.n,
               style: const TextStyle(fontSize: 17.5),
@@ -69,7 +72,7 @@ class sutHelvasi extends StatelessWidget {
               'Sütü ve şekeri bir tencereye koyup ocağa al. ',
               style: TextStyle(fontSize: 20.0),
             ),
-            const Text(
+             const Text(
               'Şeker eriyene kadar karıştır. Sakın Kaynatma',
               style: TextStyle(fontSize: 20.0),
             ),
@@ -105,7 +108,10 @@ class sutHelvasi extends StatelessWidget {
               sayfaNesne.MI,
               style: const TextStyle(fontSize: 20.0),
             ),
+
+
           ],
+          
         ),
       ),
     ));

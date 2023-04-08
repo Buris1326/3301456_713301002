@@ -1,6 +1,4 @@
-//import 'package:flutter/cupertino.dart';
-
- class sayfaNesne {
+class sayfaNesne {
 
   //Burası Başlık Kelimelerini içerir.
 
@@ -58,3 +56,12 @@
 
 
  }
+
+
+
+
+
+
+
+
+

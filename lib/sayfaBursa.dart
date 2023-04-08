@@ -2,13 +2,17 @@ import 'package:deneme1/sayfaKursunlu.dart';
 import 'package:deneme1/sayfaNesne.dart';
 import 'package:deneme1/sayfaTrilye.dart';
 import 'package:flutter/material.dart';
-import 'sayfaMudanya.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'sayfaYildirim.dart';
+//import 'package:deneme1/sayfaYildirim.dart';
+//import 'sayfaMudanya.dart';
 
 class sayfaBursa extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        backgroundColor: Colors.white10,
         body: Container(
           margin: const EdgeInsets.only(top: 120),
           child: Column(
@@ -18,7 +22,8 @@ class sayfaBursa extends StatelessWidget {
                 children: <Widget>[
                   Text(
                     sayfaNesne.g,
-                    style: const TextStyle(fontSize: 25.0),
+                    style: const TextStyle(fontSize: 25.0,
+                    color: Colors.blueGrey),
                   )
                 ],
               ),
@@ -31,7 +36,7 @@ class sayfaBursa extends StatelessWidget {
                       margin: const EdgeInsets.only(left: 20, top: 20),
                       child: Text(
                         sayfaNesne.h + ":",
-                        style: const TextStyle(fontSize: 18),
+                        style: const TextStyle(fontSize: 18, color: Colors.blueGrey),
                       ),
                     ),
                   ),
@@ -42,7 +47,13 @@ class sayfaBursa extends StatelessWidget {
                         child: TextField(
                           decoration: InputDecoration(
                               hintText: sayfaNesne.h + ' ' + sayfaNesne.i,
+                              hintStyle: TextStyle(
+                                  color: Colors.blueGrey),
                               border: const OutlineInputBorder()),
+                          style:const TextStyle(
+                            color: Colors.blueGrey,
+                            //backgroundColor: Colors.blueGrey
+                          ) ,
                         ),
                       ))
                 ],
@@ -56,7 +67,8 @@ class sayfaBursa extends StatelessWidget {
                       margin: const EdgeInsets.only(top: 20, left: 20),
                       child: Text(
                         sayfaNesne.f,
-                        style: const TextStyle(fontSize: 18),
+                        style: const TextStyle(fontSize: 18,
+                            color: Colors.blueGrey ),
                       ),
                     ),
                   ),
@@ -67,7 +79,11 @@ class sayfaBursa extends StatelessWidget {
                       child: TextField(
                         obscureText: true,
                         decoration: InputDecoration(
+
                           hintText: sayfaNesne.f + 'nizi ' + sayfaNesne.i,
+                          hintStyle: TextStyle(
+                            color: Colors.blueGrey
+                          ),
                           border: const OutlineInputBorder(),
                         ),
                       ),
@@ -92,7 +108,7 @@ class sayfaBursa extends StatelessWidget {
                         sayfaNesne.b,
                         style: const TextStyle(
                           fontSize: 16.0,
-                          color: Colors.blueGrey,
+                          color: Colors.cyanAccent,
                         ),
                       ),
                     ),
@@ -111,7 +127,7 @@ class sayfaBursa extends StatelessWidget {
                         sayfaNesne.a,
                         style: const TextStyle(
                           fontSize: 16.0,
-                          color: Colors.blueGrey,
+                          color: Colors.cyanAccent,
                         ),
                       ),
                     ),
@@ -126,28 +142,58 @@ class sayfaBursa extends StatelessWidget {
                         margin: const EdgeInsets.all(20),
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                            //Bu iki satır butonun rengini değiştirir.
                             backgroundColor: Colors.black38,
-                            //Bu satır butona basıldığında alta kırmızı çizgi çiziyor
-                            foregroundColor: Colors
-                                .cyan, //Bu satır butona basılıyken renk değiştirmeyi sağlar.
+                            foregroundColor: Colors.cyan,
                           ),
                           onPressed: () {
                             Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => sayfaMudanya()));
+                              context,
+                              MaterialPageRoute(builder: (context) => SayfaYildirim(child: Container())),
+                            );
                           },
+
                           child: Text(
                             sayfaNesne.j,
                             style: const TextStyle(
-                                color: Colors.cyan, fontSize: 12.0),
+                                color: Colors.cyanAccent, fontSize: 12.0),
                           ),
                         ),
                       ),
                     ),
+
+
                   ]),
+
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: const <Widget>[
+                  Expanded(
+                      child: Center(
+                        child: SpinKitFoldingCube(
+                          color: Colors.cyanAccent,
+                          size: 95,
+                        ),
+                      ))
+                ],
+              ),
+              Column(
+
+                children: <Widget>[Container(
+                  margin: EdgeInsets.only(top: 275.5),
+                    child:
+                    const Align(
+                      alignment: Alignment.center,
+                      child: Text("Sayfa Yildirim kısmı bana ait değil.\n Görüp beğendiğim bir yapıyı kendi uygulamama uyarladım,\n üzerinde biraz değişiklik yaptım fakat tamamı bana ait değil.",
+                      style: TextStyle(
+                        color: Colors.blueGrey
+                      ),),
+                    )
+
+                )],
+              )
+
             ],
+
           ),
         ),
       ),
