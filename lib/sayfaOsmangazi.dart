@@ -1,3 +1,12 @@
+//tuzlu yiyeceklerin bulunduğu başlık butonlar
+
+
+
+
+
+
+
+
 import 'package:deneme1/sayfaMudanya.dart';
 import 'package:deneme1/sayfaNesne.dart';
 import 'package:deneme1/sayfaNil%C3%BCfer.dart';

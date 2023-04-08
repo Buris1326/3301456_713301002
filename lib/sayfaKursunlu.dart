@@ -2,7 +2,9 @@ import 'sayfaNesne.dart';
 import 'package:flutter/material.dart';
 import 'sayfaBursa.dart';
 
-//kayıt ol sayfası
+//kayıt ol sayfasının kodları
+
+
 class sayfaKursunlu extends StatelessWidget {
   String kursunlu =
       'Üzgünüm Şuanda Kayıt Ol Aktif Değil Ana Sayfaya Dönmek İçin Bana Dokunabilirsin';

@@ -1,3 +1,7 @@
+//Giriş Ekranının Kodlarını İçerir
+
+
+
 import 'package:deneme1/sayfaKursunlu.dart';
 import 'package:deneme1/sayfaNesne.dart';
 import 'package:deneme1/sayfaTrilye.dart';

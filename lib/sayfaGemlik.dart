@@ -1,3 +1,8 @@
+//tatlı seçeneklerinin bulunduğu sayfanın kodlarını içerir
+
+
+
+
 import 'package:deneme1/sayfaMudanya.dart';
 import 'package:deneme1/sayfaNesne.dart';
 import 'package:deneme1/sutHelvasi.dart';

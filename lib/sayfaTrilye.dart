@@ -1,3 +1,8 @@
+//şifre yenileme talebinin alındığı sayfa
+
+
+
+
 import 'package:deneme1/sayfaAlt%C4%B1parmak.dart';
 import 'package:deneme1/sayfaNesne.dart';
 import 'package:flutter/material.dart';
@@ -15,7 +20,7 @@ class sayfaTrilye extends StatelessWidget {
             onPressed: () {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => sayfaBursa()));
-              // Geri tuşuna basıldığında yapılacak işlemler buraya yazılabilir.
+
             },
           ),
           title: Text(sayfaNesne.b),

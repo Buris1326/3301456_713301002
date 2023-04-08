@@ -1,3 +1,7 @@
+//Kategorilerin bulunduğu sayfa
+
+
+
 import 'package:deneme1/sayfaInegol.dart';
 import 'package:deneme1/sayfaIznik.dart';
 import 'package:deneme1/sayfaNesne.dart';

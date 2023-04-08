@@ -1,3 +1,7 @@
+//Tarif ekleyebileceğin sayfanın kodlarını içeriyor
+
+
+
 import 'package:deneme1/sayfaMudanya.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

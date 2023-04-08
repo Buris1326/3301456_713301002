@@ -1,3 +1,8 @@
+//Geçiş sayfası
+
+
+
+
 import 'dart:async';
 import 'package:deneme1/sayfaMudanya.dart';
 import 'package:flutter/material.dart';

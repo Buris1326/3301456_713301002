@@ -1,3 +1,7 @@
+//Tuzlu Yiyecek Tariflerinin Kullandığı Ortak Sayfa (Tarif Hazır Değil)
+
+
+
 import 'package:deneme1/sayfaBursa.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
