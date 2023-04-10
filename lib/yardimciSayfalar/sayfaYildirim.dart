@@ -4,7 +4,7 @@
 
 
 import 'dart:async';
-import 'package:deneme1/sayfaMudanya.dart';
+import 'package:deneme1/gecisEkranlari/sayfaMudanya.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 
@@ -25,7 +25,7 @@ class _SayfaYildirimState extends State<SayfaYildirim> {
   @override
   void initState(){
     super.initState();
-    Timer(Duration(seconds: 3), () {
+    Timer(const Duration(seconds: 3), () {          // Geçiş Sayfanın açık kalma süresi
       setState(() {
         _isLoading = false;
       });
@@ -41,7 +41,7 @@ class _SayfaYildirimState extends State<SayfaYildirim> {
         if(_isLoading)
           Container(
             color: Colors.black54,
-            child: Center(
+            child: const Center(
               child: SpinKitFadingCube(
                 color: Colors.white,
                 size: 50.0,

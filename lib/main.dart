@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'sayfaBursa.dart';
+import 'gecisEkranlari/sayfaBursa.dart';
 //import 'sayfaMudanya.dart';
 //import 'sayfaGemlik.dart';
 

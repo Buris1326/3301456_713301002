@@ -6,7 +6,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'sayfaBursa.dart';
+import '../gecisEkranlari/sayfaBursa.dart';
 
 class sayfaOnay extends StatelessWidget {
   @override

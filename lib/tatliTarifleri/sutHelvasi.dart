@@ -1,7 +1,7 @@
-import 'package:deneme1/sayfaOnay.dart';
+import 'package:deneme1/yardimciSayfalar/sayfaOnay.dart';
 import 'package:flutter/material.dart';
-import 'sayfaGemlik.dart';
-import 'sayfaNesne.dart';
+import '../gecisEkranlari/sayfaGemlik.dart';
+import '../yardimciSayfalar/sayfaNesne.dart';
 
 class sutHelvasi extends StatelessWidget {
   @override
@@ -21,7 +21,7 @@ class sutHelvasi extends StatelessWidget {
             );
           },
         ),
-        title: const Text("Süt Helvasının Tarifi"),
+        title: Text(sayfaNesne.sH),
         actions: <Widget>[
           IconButton(
             onPressed: () {

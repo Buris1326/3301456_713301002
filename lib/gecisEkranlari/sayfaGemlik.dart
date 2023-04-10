@@ -1,18 +1,18 @@
-//tuzlu yiyeceklerin bulunduğu başlık butonlar
+//tatlı seçeneklerinin bulunduğu sayfanın kodlarını içerir
 
 
 
 
-
-
-
-
-import 'package:deneme1/sayfaMudanya.dart';
-import 'package:deneme1/sayfaNesne.dart';
-import 'package:deneme1/sayfaNil%C3%BCfer.dart';
+import 'package:deneme1/tatliTarifleri/amonyakliPasta.dart';
+import 'package:deneme1/tatliTarifleri/sarayMuhallebisi.dart';
+import 'package:deneme1/gecisEkranlari/sayfaMudanya.dart';
+import 'package:deneme1/yardimciSayfalar/sayfaNesne.dart';
+import 'package:deneme1/tatliTarifleri/sutHelvasi.dart';
 import 'package:flutter/material.dart';
+import 'package:deneme1/tatliTarifleri/havucluKek.dart';
 
-class sayfaOsmangazi extends StatelessWidget {
+
+class sayfaGemlik extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -28,7 +28,11 @@ class sayfaOsmangazi extends StatelessWidget {
           ),
           title: Text(sayfaNesne.l),
         ),
-        body: Column(
+        body: SingleChildScrollView(
+    child:
+
+
+        Column(
           children: <Widget>[
             Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
               Expanded(
@@ -42,11 +46,11 @@ class sayfaOsmangazi extends StatelessWidget {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => sayfaNilufer()));
+                              builder: (context) => sutHelvasi()));
                     },
-                    child: const Text(
-                      "Açma Poğaça",
-                      style: TextStyle(color: Colors.black87, fontSize: 22.16),
+                    child: Text(
+                      sayfaNesne.sH,
+                      style: const TextStyle(color: Colors.black87, fontSize: 22.16),
                     ),
                   ),
                 ),
@@ -64,16 +68,17 @@ class sayfaOsmangazi extends StatelessWidget {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => sayfaNilufer()));
+                              builder: (context) => sarayMuhallebisi()));
                     },
                     child: const Text(
-                      "Bit Kurabiye",
+                      "Saray Muhallebisi",
                       style: TextStyle(color: Colors.black87, fontSize: 22.16),
                     ),
                   ),
                 ),
               ),
             ]),
+
             Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
               Expanded(
                 child: Container(
@@ -81,23 +86,47 @@ class sayfaOsmangazi extends StatelessWidget {
                   child: ElevatedButton(
                     style: ButtonStyle(
                         backgroundColor:
-                            MaterialStateProperty.all(Colors.transparent)),
+                        MaterialStateProperty.all(Colors.transparent)),
                     onPressed: () {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => sayfaNilufer()));
+                              builder: (context) => havucluKek()));
                     },
-                    child: const Text(
-                      "Örme Çörek",
-                      style: TextStyle(color: Colors.black87, fontSize: 22.16),
+                    child: Text(
+                      sayfaNesne.hK,
+                      style: const TextStyle(color: Colors.black87, fontSize: 22.16),
                     ),
                   ),
                 ),
               ),
             ]),
+
+            Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
+              Expanded(
+                child: Container(
+                  margin: const EdgeInsets.all(10),
+                  child: ElevatedButton(
+                    style: ButtonStyle(
+                        backgroundColor:
+                        MaterialStateProperty.all(Colors.transparent)),
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => amonyakliPasta() ));
+                    },
+                    child: Text(
+                      sayfaNesne.aP,
+                      style: const TextStyle(color: Colors.black87, fontSize: 22.16),
+                    ),
+                  ),
+                ),
+              ),
+            ]),
+
           ],
-        ),
+        ),)
       ),
     );
   }

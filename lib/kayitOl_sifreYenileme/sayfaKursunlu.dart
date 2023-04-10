@@ -1,6 +1,6 @@
-import 'sayfaNesne.dart';
+import '../yardimciSayfalar/sayfaNesne.dart';
 import 'package:flutter/material.dart';
-import 'sayfaBursa.dart';
+import '../gecisEkranlari/sayfaBursa.dart';
 
 //kayıt ol sayfasının kodları
 

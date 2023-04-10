@@ -3,10 +3,10 @@
 
 
 
-import 'package:deneme1/sayfaAlt%C4%B1parmak.dart';
-import 'package:deneme1/sayfaNesne.dart';
+import 'package:deneme1/kayitOl_sifreYenileme/sayfaAlt%C4%B1parmak.dart';
+import 'package:deneme1/yardimciSayfalar/sayfaNesne.dart';
 import 'package:flutter/material.dart';
-import 'sayfaBursa.dart';
+import '../gecisEkranlari/sayfaBursa.dart';
 
 class sayfaTrilye extends StatelessWidget {
   @override
@@ -80,3 +80,4 @@ class sayfaTrilye extends StatelessWidget {
     );
   }
 }
+

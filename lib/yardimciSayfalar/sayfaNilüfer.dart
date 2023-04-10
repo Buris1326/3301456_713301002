@@ -2,9 +2,11 @@
 
 
 
-import 'package:deneme1/sayfaBursa.dart';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import '../gecisEkranlari/sayfaMudanya.dart';
 
 class sayfaNilufer extends StatelessWidget {
   @override
@@ -27,7 +29,7 @@ class sayfaNilufer extends StatelessWidget {
             child: IconButton(
               onPressed: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => sayfaBursa()));
+                    MaterialPageRoute(builder: (context) => sayfaMudanya()));
               },
               icon: const Icon(Icons.sentiment_very_dissatisfied),
               color: Colors.red,

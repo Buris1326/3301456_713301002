@@ -2,12 +2,12 @@
 
 
 
-import 'package:deneme1/sayfaKursunlu.dart';
-import 'package:deneme1/sayfaNesne.dart';
-import 'package:deneme1/sayfaTrilye.dart';
+import 'package:deneme1/kayitOl_sifreYenileme/sayfaKursunlu.dart';
+import 'package:deneme1/yardimciSayfalar/sayfaNesne.dart';
+import 'package:deneme1/kayitOl_sifreYenileme/sayfaTrilye.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'sayfaYildirim.dart';
+import '../yardimciSayfalar/sayfaYildirim.dart';
 //import 'package:deneme1/sayfaYildirim.dart';
 //import 'sayfaMudanya.dart';
 

@@ -16,6 +16,7 @@ class sayfaNesne {
   static String l = 'Tatlılar';
   static String m = 'Tuzlular';
   static String n = 'Malzemeler';
+  static String o = 'Yapılışı';
 
 
   //Buradan sonrası tariflerin malzemeleri için
@@ -30,6 +31,9 @@ class sayfaNesne {
   static String vn = 'Vanilya';
   static String kt = 'Kabartma Tozu';
   static String MI = 'Mert İSTANBULLU';
+  static String aP = 'Amonyaklı Pasta';
+  static String sH = 'Süt Helvası';
+  static String hK = 'Havuçlu Kek';
 
   //Buradan sonrası ölçüler için
   static String ck = 'Çay Kaşığı';

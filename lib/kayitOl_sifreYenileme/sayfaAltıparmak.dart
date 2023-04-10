@@ -3,7 +3,7 @@
 
 
 
-import 'package:deneme1/sayfaBursa.dart';
+import 'package:deneme1/gecisEkranlari/sayfaBursa.dart';
 import 'package:flutter/material.dart';
 //import 'sayfaTrilye.dart';
 
