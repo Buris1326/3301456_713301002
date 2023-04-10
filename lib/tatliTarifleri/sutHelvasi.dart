@@ -1,4 +1,4 @@
-import 'package:deneme1/yardimciSayfalar/sayfaOnay.dart';
+import 'package:kirmizi_defter/yardimciSayfalar/sayfaOnay.dart';
 import 'package:flutter/material.dart';
 import '../gecisEkranlari/sayfaGemlik.dart';
 import '../yardimciSayfalar/sayfaNesne.dart';

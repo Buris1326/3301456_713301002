@@ -3,13 +3,13 @@
 
 
 
-import 'package:deneme1/tatliTarifleri/amonyakliPasta.dart';
-import 'package:deneme1/tatliTarifleri/sarayMuhallebisi.dart';
-import 'package:deneme1/gecisEkranlari/sayfaMudanya.dart';
-import 'package:deneme1/yardimciSayfalar/sayfaNesne.dart';
-import 'package:deneme1/tatliTarifleri/sutHelvasi.dart';
+import 'package:kirmizi_defter/tatliTarifleri/amonyakliPasta.dart';
+import 'package:kirmizi_defter/tatliTarifleri/sarayMuhallebisi.dart';
+import 'package:kirmizi_defter/gecisEkranlari/sayfaMudanya.dart';
+import 'package:kirmizi_defter/yardimciSayfalar/sayfaNesne.dart';
+import 'package:kirmizi_defter/tatliTarifleri/sutHelvasi.dart';
 import 'package:flutter/material.dart';
-import 'package:deneme1/tatliTarifleri/havucluKek.dart';
+import 'package:kirmizi_defter/tatliTarifleri/havucluKek.dart';
 
 
 class sayfaGemlik extends StatelessWidget {

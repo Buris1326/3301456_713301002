@@ -3,8 +3,8 @@
 
 
 
-import 'package:deneme1/kayitOl_sifreYenileme/sayfaAlt%C4%B1parmak.dart';
-import 'package:deneme1/yardimciSayfalar/sayfaNesne.dart';
+import 'package:kirmizi_defter/kayitOl_sifreYenileme/sayfaAlt%C4%B1parmak.dart';
+import 'package:kirmizi_defter/yardimciSayfalar/sayfaNesne.dart';
 import 'package:flutter/material.dart';
 import '../gecisEkranlari/sayfaBursa.dart';
 

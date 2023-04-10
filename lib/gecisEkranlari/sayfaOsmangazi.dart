@@ -7,9 +7,9 @@
 
 
 
-import 'package:deneme1/gecisEkranlari/sayfaMudanya.dart';
-import 'package:deneme1/yardimciSayfalar/sayfaNesne.dart';
-import 'package:deneme1/yardimciSayfalar/sayfaNil%C3%BCfer.dart';
+import 'package:kirmizi_defter/gecisEkranlari/sayfaMudanya.dart';
+import 'package:kirmizi_defter/yardimciSayfalar/sayfaNesne.dart';
+import 'package:kirmizi_defter/yardimciSayfalar/sayfaNil%C3%BCfer.dart';
 import 'package:flutter/material.dart';
 
 class sayfaOsmangazi extends StatelessWidget {

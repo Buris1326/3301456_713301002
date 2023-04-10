@@ -2,10 +2,10 @@
 
 
 
-import 'package:deneme1/gecisEkranlari/sayfaInegol.dart';
-import 'package:deneme1/gecisEkranlari/sayfaIznik.dart';
-import 'package:deneme1/yardimciSayfalar/sayfaNesne.dart';
-import 'package:deneme1/gecisEkranlari/sayfaOsmangazi.dart';
+import 'package:kirmizi_defter/gecisEkranlari/sayfaInegol.dart';
+import 'package:kirmizi_defter/gecisEkranlari/sayfaIznik.dart';
+import 'package:kirmizi_defter/yardimciSayfalar/sayfaNesne.dart';
+import 'package:kirmizi_defter/gecisEkranlari/sayfaOsmangazi.dart';
 import 'package:flutter/material.dart';
 import 'sayfaBursa.dart';
 import 'sayfaGemlik.dart';
