@@ -183,7 +183,7 @@ class sayfaBursa extends StatelessWidget {
               Column(
 
                 children: <Widget>[Container(
-                  margin: EdgeInsets.only(top: 275.5),
+                  margin: EdgeInsets.only(top: 75.5),
                     child:
                     const Align(
                       alignment: Alignment.center,
