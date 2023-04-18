@@ -21,7 +21,7 @@ class amonyakliPasta extends StatelessWidget {
                 );
               },
             ),
-            title: Text(sayfaNesne.aP),
+            title: Text('Amonyaklı Pasta',style: sayfaNesne.metinTipi,),
             actions: <Widget>[
               IconButton(
                 onPressed: () {
@@ -166,10 +166,7 @@ class amonyakliPasta extends StatelessWidget {
                   'Afiyet Olsun',
                   style: TextStyle(fontSize: 20.0),
                 ),
-                Text(
-                  sayfaNesne.MI,
-                  style: const TextStyle(fontSize: 20.0),
-                ),
+
 
 
               ],

@@ -31,7 +31,7 @@ class sayfaBursa extends StatelessWidget {
                   )
                 ],
               ),
-              Row(
+              Row(         //kullanıcı adı
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Expanded(
@@ -44,14 +44,14 @@ class sayfaBursa extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Expanded(
+                  Expanded(      //kullanıcı adı kutucuk
                       flex: 2,
                       child: Container(
                         margin: const EdgeInsets.only(right: 20, top: 20),
                         child: TextField(
                           decoration: InputDecoration(
                               hintText: sayfaNesne.h + ' ' + sayfaNesne.i,
-                              hintStyle: TextStyle(
+                              hintStyle: const TextStyle(
                                   color: Colors.blueGrey),
                               border: const OutlineInputBorder()),
                           style:const TextStyle(
@@ -62,7 +62,7 @@ class sayfaBursa extends StatelessWidget {
                       ))
                 ],
               ),
-              Row(
+              Row(          //şifre
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Expanded(
@@ -76,7 +76,7 @@ class sayfaBursa extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Expanded(
+                  Expanded(          //şifre kutucuk
                     flex: 2,
                     child: Container(
                       margin: const EdgeInsets.only(right: 20, top: 20),
@@ -85,7 +85,7 @@ class sayfaBursa extends StatelessWidget {
                         decoration: InputDecoration(
 
                           hintText: sayfaNesne.f + 'nizi ' + sayfaNesne.i,
-                          hintStyle: TextStyle(
+                          hintStyle: const TextStyle(
                             color: Colors.blueGrey
                           ),
                           border: const OutlineInputBorder(),
@@ -98,7 +98,7 @@ class sayfaBursa extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Expanded(
+                  Expanded(         //Şifre yenileme sayfasına gider
                       child: Container(
                     child: TextButton(
                       onPressed: () {
@@ -117,7 +117,7 @@ class sayfaBursa extends StatelessWidget {
                       ),
                     ),
                   )),
-                  Expanded(
+                  Expanded(         //kayıt ol sayfasına gider
                       child: Container(
                     child: TextButton(
                       onPressed: () {
@@ -138,7 +138,7 @@ class sayfaBursa extends StatelessWidget {
                   )),
                 ],
               ),
-              Row(
+              Row(          //önce sayfaYildirim a 3 sn sonra da sayfaMudanya ya gider
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     Expanded(
@@ -168,7 +168,7 @@ class sayfaBursa extends StatelessWidget {
 
                   ]),
 
-              Row(
+              Row(            //Sürekli dönüp duran şey
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: const <Widget>[
                   Expanded(
@@ -183,7 +183,7 @@ class sayfaBursa extends StatelessWidget {
               Column(
 
                 children: <Widget>[Container(
-                  margin: EdgeInsets.only(top: 75.5),
+                  margin: const EdgeInsets.only(top: 75.5),
                     child:
                     const Align(
                       alignment: Alignment.center,

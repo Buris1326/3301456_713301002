@@ -24,7 +24,7 @@ class sayfaTrilye extends StatelessWidget {
             },
           ),
           title: Text(sayfaNesne.b),
-          centerTitle: true,
+          centerTitle: true,          //Başlığı başlık kısmında ortalar = true
         ),
         body: Container(
           margin: const EdgeInsets.only(top: 18.5),

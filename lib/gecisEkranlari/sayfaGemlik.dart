@@ -49,7 +49,7 @@ class sayfaGemlik extends StatelessWidget {
                               builder: (context) => sutHelvasi()));
                     },
                     child: Text(
-                      sayfaNesne.sH,
+                      'Süt Helvası',
                       style: const TextStyle(color: Colors.black87, fontSize: 22.16),
                     ),
                   ),
@@ -94,7 +94,7 @@ class sayfaGemlik extends StatelessWidget {
                               builder: (context) => havucluKek()));
                     },
                     child: Text(
-                      sayfaNesne.hK,
+                      'Havuçlu Kek',
                       style: const TextStyle(color: Colors.black87, fontSize: 22.16),
                     ),
                   ),
@@ -117,7 +117,7 @@ class sayfaGemlik extends StatelessWidget {
                               builder: (context) => amonyakliPasta() ));
                     },
                     child: Text(
-                      sayfaNesne.aP,
+                      'Amonyaklı Pasta',
                       style: const TextStyle(color: Colors.black87, fontSize: 22.16),
                     ),
                   ),
