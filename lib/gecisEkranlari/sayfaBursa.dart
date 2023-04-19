@@ -3,13 +3,10 @@
 
 
 import 'package:kirmizi_defter/kayitOl_sifreYenileme/sayfaKursunlu.dart';
-import 'package:kirmizi_defter/yardimciSayfalar/sayfaNesne.dart';
 import 'package:kirmizi_defter/kayitOl_sifreYenileme/sayfaTrilye.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import '../yardimciSayfalar/sayfaYildirim.dart';
-//import 'package:kirmizi_defter/sayfaYildirim.dart';
-//import 'sayfaMudanya.dart';
 
 class sayfaBursa extends StatelessWidget {
   @override
@@ -25,7 +22,7 @@ class sayfaBursa extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Text(
-                    sayfaNesne.g,
+                    'Kırmızı Defter',
                     style: const TextStyle(fontSize: 25.0,
                     color: Colors.blueGrey),
                   )
@@ -39,7 +36,7 @@ class sayfaBursa extends StatelessWidget {
                     child: Container(
                       margin: const EdgeInsets.only(left: 20, top: 20),
                       child: Text(
-                        sayfaNesne.h + ":",
+                        'Kullanıcı Adı:',
                         style: const TextStyle(fontSize: 18, color: Colors.blueGrey),
                       ),
                     ),
@@ -50,7 +47,7 @@ class sayfaBursa extends StatelessWidget {
                         margin: const EdgeInsets.only(right: 20, top: 20),
                         child: TextField(
                           decoration: InputDecoration(
-                              hintText: sayfaNesne.h + ' ' + sayfaNesne.i,
+                              hintText: 'Kullanıcı Adı Giriniz:',
                               hintStyle: const TextStyle(
                                   color: Colors.blueGrey),
                               border: const OutlineInputBorder()),
@@ -70,7 +67,7 @@ class sayfaBursa extends StatelessWidget {
                     child: Container(
                       margin: const EdgeInsets.only(top: 20, left: 20),
                       child: Text(
-                        sayfaNesne.f,
+                        'Şifre',
                         style: const TextStyle(fontSize: 18,
                             color: Colors.blueGrey ),
                       ),
@@ -84,7 +81,7 @@ class sayfaBursa extends StatelessWidget {
                         obscureText: true,
                         decoration: InputDecoration(
 
-                          hintText: sayfaNesne.f + 'nizi ' + sayfaNesne.i,
+                          hintText: 'Şifrenizi Giriniz:',
                           hintStyle: const TextStyle(
                             color: Colors.blueGrey
                           ),
@@ -109,7 +106,7 @@ class sayfaBursa extends StatelessWidget {
                         );
                       },
                       child: Text(
-                        sayfaNesne.b,
+                        'Şifremi Unuttum',
                         style: const TextStyle(
                           fontSize: 16.0,
                           color: Colors.cyanAccent,
@@ -128,7 +125,7 @@ class sayfaBursa extends StatelessWidget {
                         );
                       },
                       child: Text(
-                        sayfaNesne.a,
+                        'Kayıt Ol',
                         style: const TextStyle(
                           fontSize: 16.0,
                           color: Colors.cyanAccent,
@@ -157,7 +154,7 @@ class sayfaBursa extends StatelessWidget {
                           },
 
                           child: Text(
-                            sayfaNesne.j,
+                            'Giriş Yap',
                             style: const TextStyle(
                                 color: Colors.cyanAccent, fontSize: 12.0),
                           ),

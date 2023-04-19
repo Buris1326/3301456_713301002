@@ -4,7 +4,6 @@
 
 
 import 'package:kirmizi_defter/kayitOl_sifreYenileme/sayfaAlt%C4%B1parmak.dart';
-import 'package:kirmizi_defter/yardimciSayfalar/sayfaNesne.dart';
 import 'package:flutter/material.dart';
 import '../gecisEkranlari/sayfaBursa.dart';
 
@@ -23,7 +22,7 @@ class sayfaTrilye extends StatelessWidget {
 
             },
           ),
-          title: Text(sayfaNesne.b),
+          title: Text('Şifremi Unuttum'),
           centerTitle: true,          //Başlığı başlık kısmında ortalar = true
         ),
         body: Container(
@@ -40,7 +39,7 @@ class sayfaTrilye extends StatelessWidget {
                   Expanded(
                     child: TextFormField(
                       decoration: InputDecoration(
-                        labelText: sayfaNesne.c,
+                        labelText: 'Ad',
                       ),
                     ),
                   ),
@@ -53,7 +52,7 @@ class sayfaTrilye extends StatelessWidget {
                   Expanded(
                     child: TextFormField(
                       decoration: InputDecoration(
-                        labelText: sayfaNesne.d,
+                        labelText: 'Soyad',
                       ),
                     ),
                   ),
@@ -70,7 +69,7 @@ class sayfaTrilye extends StatelessWidget {
                                 MaterialPageRoute(
                                     builder: (context) => sayfaAltiparmak()));
                           },
-                          child: Text(sayfaNesne.e)))
+                          child: Text('Gönder')))
                 ],
               ),
             ],

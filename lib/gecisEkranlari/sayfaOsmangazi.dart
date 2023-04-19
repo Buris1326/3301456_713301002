@@ -26,7 +26,7 @@ class sayfaOsmangazi extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => sayfaMudanya()));
             },
           ),
-          title: Text(sayfaNesne.l),
+          title: Text('Tatlılar'),
         ),
         body: Column(
           children: <Widget>[

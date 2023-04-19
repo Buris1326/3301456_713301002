@@ -28,7 +28,7 @@ class sayfaKursunlu extends StatelessWidget {
            */
 
           title: Text(
-            sayfaNesne.a,
+            'Kayıt Ol',
             style: const TextStyle(color: Colors.pink),
           ),
           centerTitle: true,

@@ -27,7 +27,7 @@ class sayfaMudanya extends StatelessWidget {
 
           },
         ),
-        title: Text(sayfaNesne.k),
+        title: Text('Canın Ne İstiyor ?'),
       ),
       body: Column(
 
@@ -43,7 +43,7 @@ class sayfaMudanya extends StatelessWidget {
                     children: [
 
                       Text(
-                        sayfaNesne.l + ': ',
+                        'Tatlılar: ',
                         style: const TextStyle(fontSize: 18, color: Colors.limeAccent),
                       ),
                     ],
@@ -63,7 +63,7 @@ class sayfaMudanya extends StatelessWidget {
                           context, MaterialPageRoute(builder: (context) => sayfaGemlik()));
                     },
                     child: Text(
-                      sayfaNesne.l,
+                      'Tatlılar',
                       style: const TextStyle(color: Colors.black),
                     ),
                   ),
@@ -80,7 +80,7 @@ class sayfaMudanya extends StatelessWidget {
                 child: Container(
                   margin: const EdgeInsets.only(left: 20, top: 20),
                   child: Text(
-                    sayfaNesne.m + ': ',
+                      'Tuzlular: ',
                     style: const TextStyle(fontSize: 18,color: Colors.limeAccent),
                   ),
                 ),
@@ -96,7 +96,7 @@ class sayfaMudanya extends StatelessWidget {
                             MaterialPageRoute(
                                 builder: (context) => sayfaOsmangazi()));
                       },
-                      child: Text(sayfaNesne.m),
+                      child: Text('Tuzlular'),
                     ),
                   ))
             ],

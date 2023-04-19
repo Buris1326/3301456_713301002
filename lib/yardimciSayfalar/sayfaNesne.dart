@@ -1,36 +1,18 @@
 import 'package:flutter/material.dart';
 
+
+
 class sayfaNesne {
-
-  //Burası Başlık Kelimelerini içerir.
-
-  static String a = 'Kayıt Ol';
-  static String b = 'Şifremi Unuttum';
-  static String c = 'Ad';
-  static String d = 'Soyad';
-  static String e = 'Gönder';
-  static String f = 'Şifre';
-  static String g = 'Ana Ekran';
-  static String h = 'Kullanıcı Adı';
-  static String i = 'Giriniz:';
-  static String j = 'Giriş Yap';
-  static String k = 'Canın Ne İstiyor ?';
-  static String l = 'Tatlılar';
-  static String m = 'Tuzlular';
-  static String n = 'Malzemeler';
-  static String o = 'Yapılışı';
-
-
-
-
-
-
-
-  static final TextStyle metinTipi = TextStyle(
+  static final TextStyle metinTipi = const TextStyle(
     fontSize: 17.5, // font boyutu
     color: Colors.black, // yazı rengi
     fontWeight: FontWeight.bold, // yazı kalınlığı
-  );
+  ); //Tarif detayları için
+  static final ButtonStyle butonStili = ButtonStyle(backgroundColor:
+  MaterialStateProperty.all(Colors.transparent)); //sayfaGemlik için
+  static final TextStyle butonMetintipi = const TextStyle(
+    color: Colors.black87, fontSize: 22.16); //sayfaGemlik için
+
 
 
 
@@ -120,5 +102,41 @@ static final sutHelvasi =
   '\nMert İSTANBULLU\nAFİYET OLSUN\n';
 
 
+
+
+
+
+
+
+
+static final amonyakliPasta = '\n\nMALZEMELER:\n\n'
+    '1 Su Bardağı Süt\n'
+    '2 Yumurta\n'
+    '1 Su Bardağı Şeker\n'
+    '1 Su Bardağı Sıvıyağ\n'
+    '1 Yemek Kaşığı Amonyak\n'
+    '1 Pakte Kabartma Tozu\n'
+    '1Paket Vanilya\n'
+    '1 Paket Yaş Mayanın Yarısı\n Hamurun içine uvala ve mıncıkla.\n'
+    'Aldığı Kadar Un\n\n'
+    'Kreması İçin:\n\n'
+    '2 Litre Süt\n'
+    '4 Yemek Kaşığı Nişasta\n'
+    '4 Yemek Kaşığı Un\n'
+    '2 Paket Kakao\n'
+    'İstediğin Kadar Şeker\n'
+    '***NOT*** Bu ölçüdeki krema 4 adet bisküviyi ıslatmak için geçerli\n'
+    '***NOT*** Bol bisküvili olursa daha güzel olur.\n'
+    'Hazırlanış:\n'
+    'Tüm malzemeleri bir kaba koy ve yoğur.\n'
+    'Hamuru 30 dk dinlendir.\n'
+    '8 eş parçaya böl ve orta boy tepsi boyutunda aç.\n'
+    'Önceden ısıtılmış 170 derece turbo ayardaki fırında altı ve üstü kızarana kadar hamurları tek tek pişir\n'
+    'Krema için bütün malzemeleri tencereye koy ve kaynayana kadar çırp.\n'
+    'Tepsinin dibine kremadan koy ve üzerine bisküviden koy \n Bu şekilde her katında krema olacak şekilde 4 bisküviyi ıslat.\n'
+    '***NOT*** Eğer tarifteki krema ölçüsü aynı şekilde kullanıldıysa 4 bisküvi.\n'
+    '***NOT*** Pastanın her katına kremayı eşit dökmeye çalış ve en üst kısmına ayırmayı unutma.\n'
+    'Buzdolabında 1 gece beklet.\n'
+    '\n\nMert İSTANBULLU\nAfiyet Olsun';
 
 }
