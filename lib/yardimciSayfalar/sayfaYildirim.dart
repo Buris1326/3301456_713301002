@@ -25,7 +25,7 @@ class _SayfaYildirimState extends State<SayfaYildirim> {
   @override
   void initState(){
     super.initState();
-    Timer(const Duration(seconds: 3), () {          // Geçiş Sayfanın açık kalma süresi
+    Timer(const Duration(seconds: 1), () {          // Geçiş Sayfanın açık kalma süresi
       setState(() {
         _isLoading = false;
       });
