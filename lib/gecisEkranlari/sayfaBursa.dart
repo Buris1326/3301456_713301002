@@ -176,24 +176,7 @@ class sayfaBursa extends StatelessWidget {
                         ),
                       ))
                 ],
-              ),
-              Column(
-
-                children: <Widget>[Container(
-                  margin: const EdgeInsets.only(top: 75.5),
-                    child:
-                    const Align(
-                      alignment: Alignment.center,
-                      child: Text("Sayfa Yildirim kısmı bana ait değil.\n Görüp beğendiğim bir yapıyı kendi uygulamama uyarladım,\n üzerinde biraz değişiklik yaptım fakat tamamı bana ait değil.",
-                      style: TextStyle(
-                        color: Colors.blueGrey
-                      ),),
-                    )
-
-                )],
-              )
-
-            ],
+              ),],
 
           ),
         ),

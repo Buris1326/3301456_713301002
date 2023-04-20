@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 
 
 class sayfaNesne {
-  static final TextStyle metinTipi = const TextStyle(
+  static final TextStyle metinTipi = TextStyle(
     fontSize: 17.5, // font boyutu
     color: Colors.black, // yazı rengi
     fontWeight: FontWeight.bold, // yazı kalınlığı
   ); //Tarif detayları için
   static final ButtonStyle butonStili = ButtonStyle(backgroundColor:
   MaterialStateProperty.all(Colors.transparent)); //sayfaGemlik için
-  static final TextStyle butonMetintipi = const TextStyle(
+  static final TextStyle butonMetintipi = TextStyle(
     color: Colors.black87, fontSize: 22.16); //sayfaGemlik için
 
 
@@ -280,5 +280,151 @@ static final String starbucksKurabiye = '\n\nMalzemeler:\n\n'
     '180 derece turbo ayarda pişir.\n'
     '\nMert İSTANBULLU\nAFİYET OLSUN\n';
 
-static final String lazBoregi = '';
+static final String lazBoregi = '\n\nMalzemeler:\n\n'
+    'Hamuru İçin:\n\n'
+    '1 Yemek Kaşığı Margarin\n'
+    'Yarım Çay Bardağı Sıvı Yağ\n'
+    'Yarım Çay Bardağı Süt\n'
+    'Yarım Çay Bardağı Su\n'
+    '1 Yumurta\n'
+    '1 Tutam Tuz\n'
+    '3,5 Su Bardağı Un\n'
+    '\nMuhallebisi İçin:\n\n'
+    '4 Su Bardağı Süt\n'
+    '4,5 Yemek Kaşığı Tepeleme Un\n'
+    '1 Su Bardağı Şeker\n'
+    '4 Yumurta\n'
+    'Yarım Çay Kaşığı Karabiber\n'
+    '1 Yemek Kaşığı Margarin\n'
+    '\nŞerbeti İçin:\n\n'
+    '4 Su Bardağı Şeker:\n'
+    '4,5 Su Bardağı Su\n'
+    'Lİmon\n'
+    '\nÜzeri İçin:\n\n'
+    '250 gr Margarin\n'
+    'Yarım Su Bardağı Sıvı Yağ\n'
+    '\nAçmak İçin:\n'
+    'Nişasta\n'
+    '\nYapılışı:\n\n'
+    'Tüm hamur malzemelerini bir kaba al ve yoğur.\n'
+    '!!Hamur ne çok sert ne de çok yumuşak olmalı\n'
+    'Hamurları küçük eşit büyüklükteki parçalara ayır.\n'
+    'Her parçayı 5 cm çapında aç.\n'
+    'Bu işlemi gerçekleştirirken nişasta kullanmayı unutma.\n'
+    'Açtığın parçaları bir tepsi veya tabağa koy.\n'
+    'Tepsiye veya tabağa koyarken her hamurun arasına nişasta serp ve poşet koy ki birbirine yapışmasınlar.\n'
+    'En az 1-1,5 saat buzdolabında hamurları dinlendir.\n'
+    'Muhallebisi için,\n'
+    'Süt, un ve şekeri çırparak hiç topak kalmayacak şekilde kaynat.\n'
+    'Kıvam alınca 1-2 dk daha kaynatmaya devam et ve altını kapat.\n'
+    'İçerisine margarini ekle ve eriyip yok olana kadar karıştır.\n'
+    'Muhallebi soğuyunca içerisine yumurtaları tek tek ekle ve her yumurtada çırp.\n'
+    'Daha sonra karabiberi ekle ve yine çırp.\n'
+    '!!!Muhallebinin bu aşamada soğuk olması önemli.\n'
+    '!!!Muhallebinin son aşamada pürüzsüz bir kıvamda olması gerekiyor.\n'
+    '***!!!Muhallebiyi sakın ama sakın mikser ile çırpma.\nBir tel yardımı ile çırp.\n'
+    'Hamurun devamı;\n'
+    'Hamurları bol nişasta ile incecik aç.\n'
+    'Açtığın hamurları 4 parmak genişliğinde şeritler halinde DÜZ bir şekilde kes.\n'
+    'Kestiğin her şeridin başına bir yemek kaşığı muhallebiden koy.\n'
+    'Şeritleri üçgen muska şeklinde katla.\n'
+    'Her parçayı düzgünce tepsiye diz.\n'
+    'Tüm hamurlara aynı işlemi yaptıktan sonra,\n'
+    'Üzeri için gerekli olan yağları bir tavaya al\nMargarin eriyinceye kadar ocağın üzerinde tut.\n'
+    '180 derece, turbo fan olarak önceden ısıtılmış fırında üzeri kızarana kadar,\n'
+    'Ortalama 30-45 dk daha sonrasında 150 derecede içini çekene kadar pişir.\n'
+    'Fırına koyar koymaz şerbet için tüm malzemeleri bir tencereye koy.\n'
+    'Şerbet kaynamaya başlayınca (göz göz olunca) orta ateşte 15-20 dk kaynat.\n'
+    'Fırından tatlıyı çıkarır çıkarmaz şerbeti dök.\n'
+    '2 saat beklettikten sonra yiyebilirsin.\n'
+    '\nMert İSTANBULLU\n\nAFİYET OLSUN\n';
+
+
+
+
+static final String muhallebi = '\n\nMalzemeler:\n\n'
+    '1 Lt Süt\n'
+    '5-60 gr Margarin\n'
+    '1 Paket Vanilya\n'
+    '3 Kahve Fincanı Şeker\n'
+    '2 Kahve Fincanı Un\n'
+    '\nYapılışı:\n'
+    '\nSüt şeker ve unu bir tencereye al,\nkaynayana kadar çır.\n'
+    '1-2 dk daha kaynatmaya devam et.\n'
+    'Ocağın altını kapat ve margarin ve vanilyayı ekle.\n'
+    'Margarin eriyene kadar karıştır.\n'
+    'Dilediğin kaplara dök.\n'
+    'Soğuyana kadar bekle.\n'
+    '\nMert İSTANBULLU\nAFİYET OLSUN\n';
+
+
+static final String firinSutlac = '\n\nMalzemeler:\n\n'
+    '1 Lt Süt\n'
+    '1 Paket Vanilya\n'
+    '3 Yemek Kaşığı Nişasta + 3 Yemek Kaşığı Süt\n'
+    '1/4 Su Bardağı Pirinç\n'
+    'Yarım Su Bardağı Su\n'
+    '1 Su Bardağı Şeker\n'
+    '\nYapılışı:\n\n'
+    'Pirinci ve suyu tencereye koyup kısık ateşte kapağı kapalı olarak pişir.\n'
+    'Sütü, şekeri ve pirinci(kalan suyunu süzmeden) başka bir tencerede orta ateşte 5 dk karıştır.\n'
+    'Nişasta ve 3 yemek kaşığı sütü bir kasede karıştır.\n'
+    'Bu karışımı pirincin içerisine ekle.\n'
+    '5 dk boyunca orta ateşte kaynat.\n'
+    'Vanilyayı da ekle ve bir daha karıştır.\n'
+    'Daha sonra ocağın altını kapat ve sütlacı fırın kaselerine paylaştır.\n'
+    'Kaselerin ısıya dayanıklı olması önemli.\n'
+    'Sütlaçları 15 dk kadar dışarıda beklet.\n'
+    '***Üzeri kaymak tutması için***\n***Bu sayede daha iyi kızarır.\n'
+    'Su kaynat.\n'
+    'Sütlaçları bir fırın tepsisine al ve tepsinin içerisine bir miktar kaynar su dök.\n'
+    'Önceden ısıtılmış 200 derece turbo ayardaki fırında üzerleri kızarıncaya kadar fırında tut.\n'
+    'Soğuyunca veya isteğe bağlı sıcakken yiyebilirsin.\n'
+    '\nMert İSTANBULLU\n\nAFİYET OLSUN\n';
+
+
+
+
+
+
+
+static final String trilece = '\n\nMalzemeler:\n\n'
+    'Keki İçin:\n\n'
+    '-> 5 Yumurta\n'
+    '-> 1,5 Su Bardağı Un\n'
+    '-> 1 er Paket Vanilya ve Kabartma Tozu'
+    '\n\nÜzeri İçin:\n\n'
+    '-> 1 Paket Krem Şanti\n'
+    '-> 1 Su Bardağı Süt\n'
+    '\nSütlü Sosu İçin:\n\n'
+    '-> 3,5 Su Bardağı Süt\n'
+    '-> 3 Yemek Kaşığı Şeker\n'
+    '-> 200 mL sıvı Krema\n'
+    '\nKaramel Sos İçin:\n\n'
+    '-> 1 Çay Bardağı Şeker\n'
+    '-> 2 Yemek Kaşığı Margarin'
+    '\n-> 200 mL Sıvı Krema\n'
+    '\nYapılışı:\n\n'
+    'Keki için,\n şekeri ve yumurtayı çırp.\n'
+    'Kalan malzemeleri de eleyerek karışıma ekle\n Bir spatula yardımı ile karıştır.\n'
+    '28x28 cm kare borcama yağlı kağıt koy ve dök. \n170 derece alt-üst ayarda 10 dk\nDaha sonra 150 derecede 30 dk pişir.\n'
+    'Karamel sos için,\n'
+    'Şekeri bir tavaya koy ve kısık ateşte erit.\n'
+    'Erime işlemi gerçekleşene kadar asla karıştırma.\n'
+    'Sadece tavayı salla\nDemir kaşık asla sürme.\n'
+    'Şeker eriyince içerisine margarin ekle.\n'
+    'Margarin eriyince içerisine kremayı da ekle ve 3-4 dk kaynat\n'
+    'Karamel sosu başka bir kaba alarak soğut.\n'
+    'Sütlü sos için tüm malzemeleri bir kapta çırp.\n'
+    'Kremşantiyi hazırla.\n'
+    'Kek fırından çıkınca ilk sıcaklığının çıkmasını bekle.\n'
+    'Yağlı kağıdı çıkart ve keki borcama ters bir şekilde koy.\n'
+    'Kekin üzerine chopstick ile delikler aç ve sütlü sosu dök.\n'
+    'Kremşantiden bir miktar ayır (üzerini süslemek için) ve kekikn üzerine sür.\n'
+    'Karamelin tamamını dök.\n'
+    'Kalan kremşantiyi 3-4 cm aralıklarla sıkma torbası yardımıyla uzun ince şeritler halinde sık.\n'
+    'Bu sıkma işlemi borcanın iki enarı arasında kesintisiz olmalı.\n'
+    'Şeritlerin üzerinden kürdan yardımı ile geçerek desen oluştur.\n'
+    '2-3 saat dinlendir.\n'
+    '\nMert İSTANBBULLU\n\nAFİYET OLSUN\n';
 }

@@ -2,13 +2,16 @@
 
 import 'package:kirmizi_defter/tatliTarifleri/amonyakliPasta.dart';
 import 'package:kirmizi_defter/tatliTarifleri/cikolataliKek.dart';
+import 'package:kirmizi_defter/tatliTarifleri/firinSutlac.dart';
 import 'package:kirmizi_defter/tatliTarifleri/lazBoregi.dart';
 import 'package:kirmizi_defter/tatliTarifleri/misirKeki.dart';
+import 'package:kirmizi_defter/tatliTarifleri/muhallebi.dart';
 import 'package:kirmizi_defter/tatliTarifleri/sarayMuhallebisi.dart';
 import 'package:kirmizi_defter/gecisEkranlari/sayfaMudanya.dart';
 import 'package:kirmizi_defter/tatliTarifleri/starbucksKurabiye.dart';
 import 'package:kirmizi_defter/tatliTarifleri/surprizKurabiye.dart';
 import 'package:kirmizi_defter/tatliTarifleri/tahinliCorek.dart';
+import 'package:kirmizi_defter/tatliTarifleri/trilece.dart';
 import 'package:kirmizi_defter/yardimciSayfalar/sayfaNesne.dart';
 import 'package:kirmizi_defter/tatliTarifleri/sutHelvasi.dart';
 import 'package:flutter/material.dart';
@@ -251,6 +254,72 @@ class sayfaGemlik extends StatelessWidget {
                             },
                             child: Text(
                               'Laz Böreği',
+                              style: sayfaNesne.butonMetintipi,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ]),
+                Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Expanded(
+                        child: Container(
+                          margin: const EdgeInsets.all(10),
+                          child: ElevatedButton(
+                            style: sayfaNesne.butonStili,
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => firinSutlac()));
+                            },
+                            child: Text(
+                              'Fırın Sütlaç',
+                              style: sayfaNesne.butonMetintipi,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ]),
+                Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Expanded(
+                        child: Container(
+                          margin: const EdgeInsets.all(10),
+                          child: ElevatedButton(
+                            style: sayfaNesne.butonStili,
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => muhallebi()));
+                            },
+                            child: Text(
+                              'Muhallebi',
+                              style: sayfaNesne.butonMetintipi,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ]),
+                Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Expanded(
+                        child: Container(
+                          margin: const EdgeInsets.all(10),
+                          child: ElevatedButton(
+                            style: sayfaNesne.butonStili,
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => trilece()));
+                            },
+                            child: Text(
+                              'Trileçe',
                               style: sayfaNesne.butonMetintipi,
                             ),
                           ),
