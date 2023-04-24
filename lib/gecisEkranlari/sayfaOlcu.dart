@@ -29,7 +29,7 @@ class _sayfaIznikState extends State<sayfaIznik> {
                 icon: const Icon(Icons.arrow_back),
                 onPressed: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => sayfaMudanya()));
+                      MaterialPageRoute(builder: (context) => Sayfa_kategori()));
                 })),
         body: SafeArea(
           child: Column(

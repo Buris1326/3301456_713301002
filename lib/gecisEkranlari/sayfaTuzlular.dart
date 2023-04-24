@@ -7,12 +7,12 @@
 
 
 
+
 import 'package:kirmizi_defter/gecisEkranlari/sayfaMudanya.dart';
-import 'package:kirmizi_defter/yardimciSayfalar/sayfaNesne.dart';
 import 'package:kirmizi_defter/yardimciSayfalar/sayfaNil%C3%BCfer.dart';
 import 'package:flutter/material.dart';
 
-class sayfaOsmangazi extends StatelessWidget {
+class Sayfa_tuzlular extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -23,7 +23,7 @@ class sayfaOsmangazi extends StatelessWidget {
             icon: const Icon(Icons.arrow_back),
             onPressed: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => sayfaMudanya()));
+                  MaterialPageRoute(builder: (context) => Sayfa_kategori()));
             },
           ),
           title: Text('Tatlılar'),

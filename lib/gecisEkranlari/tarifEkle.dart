@@ -3,10 +3,9 @@
 
 
 import 'package:kirmizi_defter/gecisEkranlari/sayfaMudanya.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class sayfaInegol extends StatelessWidget {
+class Tarif_ekle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -27,7 +26,7 @@ class sayfaInegol extends StatelessWidget {
                 child: IconButton(
                   onPressed: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => sayfaMudanya()));
+                        MaterialPageRoute(builder: (context) => Sayfa_kategori()));
                   },
                   icon: const Icon(Icons.arrow_back_ios_new_outlined),
                   color: Colors.red,

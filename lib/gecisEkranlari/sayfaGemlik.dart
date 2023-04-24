@@ -28,7 +28,7 @@ class sayfaGemlik extends StatelessWidget {
               icon: const Icon(Icons.arrow_back),
               onPressed: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => sayfaMudanya()));
+                    MaterialPageRoute(builder: (context) => Sayfa_kategori()));
               },
             ),
             title: Text(

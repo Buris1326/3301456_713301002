@@ -2,16 +2,15 @@
 
 
 
-import 'package:kirmizi_defter/gecisEkranlari/sayfaInegol.dart';
-import 'package:kirmizi_defter/gecisEkranlari/sayfaIznik.dart';
-import 'package:kirmizi_defter/yardimciSayfalar/sayfaNesne.dart';
-import 'package:kirmizi_defter/gecisEkranlari/sayfaOsmangazi.dart';
+import 'package:kirmizi_defter/gecisEkranlari/sayfaTuzlular.dart';
+import 'package:kirmizi_defter/gecisEkranlari/tarifEkle.dart';
+import 'package:kirmizi_defter/gecisEkranlari/sayfaOlcu.dart';
 import 'package:flutter/material.dart';
 import 'sayfaBursa.dart';
 import 'sayfaGemlik.dart';
 
 
-class sayfaMudanya extends StatelessWidget {
+class Sayfa_kategori extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -94,7 +93,7 @@ class sayfaMudanya extends StatelessWidget {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => sayfaOsmangazi()));
+                                builder: (context) => Sayfa_tuzlular()));
                       },
                       child: Text('Tuzlular'),
                     ),
@@ -127,7 +126,7 @@ class sayfaMudanya extends StatelessWidget {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => sayfaInegol()));
+                                builder: (context) => Tarif_ekle()));
                       },
                       child: const Text('Ekle',
                       style: TextStyle(color: Colors.black54),

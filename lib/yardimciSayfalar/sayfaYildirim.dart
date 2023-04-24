@@ -29,7 +29,7 @@ class _SayfaYildirimState extends State<SayfaYildirim> {
       setState(() {
         _isLoading = false;
       });
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => sayfaMudanya()));
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Sayfa_kategori()));
     });
   }
 

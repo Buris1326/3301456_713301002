@@ -1,5 +1,5 @@
-import 'package:kirmizi_defter/yardimciSayfalar/sayfaOnay.dart';
 import 'package:flutter/material.dart';
+import 'package:kirmizi_defter/yardimciSayfalar/sayfaOnay.dart';
 import '../gecisEkranlari/sayfaGemlik.dart';
 import '../yardimciSayfalar/sayfaNesne.dart';
 
@@ -7,36 +7,41 @@ class muhallebi extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        home: Scaffold(
-          appBar: AppBar(
-            backgroundColor: Colors.purple,
-            leading: IconButton(
-              icon: const Icon(Icons.arrow_back),
+      home: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.purple,
+          leading: IconButton(
+            icon: const Icon(Icons.arrow_back),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => sayfaGemlik()),
+              );
+            },
+          ),
+          title: const Text(
+            'Muhallebi',
+          ),
+          actions: <Widget>[
+            IconButton(
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
-                    builder: (context) => sayfaGemlik(),
-                  ),
+                  MaterialPageRoute(builder: (context) => sayfaOnay()),
                 );
               },
+              icon: const Icon(Icons.star_purple500_sharp),
             ),
-            title: Text('Muhallebi',style: sayfaNesne.metinTipi,),
-            actions: <Widget>[
-              IconButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => sayfaOnay()),
-                  );
-                },
-                icon: const Icon(Icons.star_purple500_sharp),
-              )
+          ],
+        ),
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              Text(sayfaNesne.muhallebi, style: sayfaNesne.metinTipi),
             ],
           ),
-          body: SingleChildScrollView(
-            child: Text(sayfaNesne.muhallebi,style: sayfaNesne.metinTipi),
-          ),
-        ));
+        ),
+      ),
+    );
   }
 }
