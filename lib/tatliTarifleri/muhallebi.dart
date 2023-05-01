@@ -37,7 +37,7 @@ class muhallebi extends StatelessWidget {
         body: SingleChildScrollView(
           child: Column(
             children: [
-              Text(sayfaNesne.muhallebi, style: sayfaNesne.metinTipi),
+              Text(sayfaNesne.muhallebi,style: sayfaNesne.metinTipi),
             ],
           ),
         ),

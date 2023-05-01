@@ -7,7 +7,7 @@ import 'package:kirmizi_defter/tatliTarifleri/lazBoregi.dart';
 import 'package:kirmizi_defter/tatliTarifleri/misirKeki.dart';
 import 'package:kirmizi_defter/tatliTarifleri/muhallebi.dart';
 import 'package:kirmizi_defter/tatliTarifleri/sarayMuhallebisi.dart';
-import 'package:kirmizi_defter/gecisEkranlari/sayfaMudanya.dart';
+import 'package:kirmizi_defter/gecisEkranlari/sayfaKategori.dart';
 import 'package:kirmizi_defter/tatliTarifleri/starbucksKurabiye.dart';
 import 'package:kirmizi_defter/tatliTarifleri/surprizKurabiye.dart';
 import 'package:kirmizi_defter/tatliTarifleri/tahinliCorek.dart';

@@ -8,7 +8,7 @@
 
 
 
-import 'package:kirmizi_defter/gecisEkranlari/sayfaMudanya.dart';
+import 'package:kirmizi_defter/gecisEkranlari/sayfaKategori.dart';
 import 'package:kirmizi_defter/yardimciSayfalar/sayfaNil%C3%BCfer.dart';
 import 'package:flutter/material.dart';
 

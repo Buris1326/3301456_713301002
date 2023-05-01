@@ -6,7 +6,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../gecisEkranlari/sayfaMudanya.dart';
+import '../gecisEkranlari/sayfaKategori.dart';
 
 class sayfaNilufer extends StatelessWidget {
   @override
