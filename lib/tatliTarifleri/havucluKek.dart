@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../yardimciSayfalar/sayfaNesne.dart';
-import '../gecisEkranlari/sayfaGemlik.dart';
+import '../gecisEkranlari/sayfaTatlilar.dart';
 import '../yardimciSayfalar/sayfaOnay.dart';
 
 class havucluKek extends StatelessWidget {

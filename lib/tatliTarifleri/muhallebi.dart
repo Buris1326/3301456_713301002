@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kirmizi_defter/yardimciSayfalar/sayfaOnay.dart';
-import '../gecisEkranlari/sayfaGemlik.dart';
+import '../gecisEkranlari/sayfaTatlilar.dart';
 import '../yardimciSayfalar/sayfaNesne.dart';
 
 class muhallebi extends StatelessWidget {

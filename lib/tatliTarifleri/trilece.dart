@@ -1,6 +1,6 @@
 import 'package:kirmizi_defter/yardimciSayfalar/sayfaOnay.dart';
 import 'package:flutter/material.dart';
-import '../gecisEkranlari/sayfaGemlik.dart';
+import '../gecisEkranlari/sayfaTatlilar.dart';
 import '../yardimciSayfalar/sayfaNesne.dart';
 
 class trilece extends StatelessWidget {

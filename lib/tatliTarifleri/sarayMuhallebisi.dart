@@ -1,29 +1,28 @@
-import 'package:kirmizi_defter/yardimciSayfalar/sayfaNesne.dart';
 import 'package:flutter/material.dart';
-import '../gecisEkranlari/sayfaGemlik.dart';
+import 'package:kirmizi_defter/yardimciSayfalar/sayfaNesne.dart';
 
-class sarayMuhallebisi extends StatelessWidget {
+class SarayMuhallebisi extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        home: Scaffold(
-        appBar: AppBar(
+    return Scaffold(
+      appBar: AppBar(
+        leading: null,
         backgroundColor: Colors.purple,
-        leading: IconButton(
-        icon: const Icon(Icons.arrow_back),
-    onPressed: () {
-    Navigator.push(
-    context,
-    MaterialPageRoute(
-    builder: (context) => sayfaGemlik(),
-    ),
+        title: const Text('Saray Muhallebisi'),
+      ),
+      body: GestureDetector(
+        onScaleUpdate: (ScaleUpdateDetails details) {
+          if (details.scale < 0.6) {
+            Navigator.pop(context);
+          }
+          },
+        child: SingleChildScrollView(
+          child: Text(
+            sayfaNesne.sarayMuhallebisi,
+            style: sayfaNesne.metinTipi,
+          ),
+        ),
+      ),
     );
-    },
-    ),
-    title: Text('Saray Muhallebisi'),
-    ),
-    body:SingleChildScrollView(
-    child:Text(sayfaNesne.sarayMuhallebisi,style: sayfaNesne.metinTipi,),
-    )));
   }
 }

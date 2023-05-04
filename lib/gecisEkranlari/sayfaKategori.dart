@@ -7,7 +7,7 @@ import 'package:kirmizi_defter/gecisEkranlari/tarifEkle.dart';
 import 'package:kirmizi_defter/gecisEkranlari/sayfaOlcu.dart';
 import 'package:flutter/material.dart';
 import 'sayfaBursa.dart';
-import 'sayfaGemlik.dart';
+import 'sayfaTatlilar.dart';
 
 
 class Sayfa_kategori extends StatelessWidget {

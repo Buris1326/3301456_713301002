@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kirmizi_defter/gecisEkranlari/sayfaGemlik.dart';
+import 'package:kirmizi_defter/gecisEkranlari/sayfaTatlilar.dart';
 import 'package:kirmizi_defter/yardimciSayfalar/sayfaOnay.dart';
 import 'package:kirmizi_defter/yardimciSayfalar/sayfaNesne.dart';
 

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'gecisEkranlari/sayfaBursa.dart';
 //import 'sayfaKategori.dart';
-//import 'sayfaGemlik.dart';
+//import 'sayfaTatlilar.dart';
 
 
 

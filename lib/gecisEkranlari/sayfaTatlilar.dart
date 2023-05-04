@@ -16,7 +16,10 @@ import 'package:kirmizi_defter/yardimciSayfalar/sayfaNesne.dart';
 import 'package:kirmizi_defter/tatliTarifleri/sutHelvasi.dart';
 import 'package:flutter/material.dart';
 import 'package:kirmizi_defter/tatliTarifleri/havucluKek.dart';
-
+import 'package:share_plus/share_plus.dart';
+void shareRecipe(String recipeText) {
+  Share.share(recipeText);
+}
 class sayfaGemlik extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -74,7 +77,7 @@ class sayfaGemlik extends StatelessWidget {
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) =>
-                                          sarayMuhallebisi()));
+                                          SarayMuhallebisi()));
                             },
                             child: Text(
                               "Saray Muhallebisi",
@@ -83,6 +86,18 @@ class sayfaGemlik extends StatelessWidget {
                           ),
                         ),
                       ),
+                      Expanded(child:
+                      GestureDetector(
+                        onLongPress: () {
+                          shareRecipe('Çok lezzetli bir yemek tarifi!');
+                        },
+                        child: Icon(
+                          Icons.beach_access,
+                          color: Colors.blue,
+                          size: 36.0,
+                        ),
+                      ),
+                      )
                     ]),
                 Row(
                     mainAxisAlignment: MainAxisAlignment.center,
