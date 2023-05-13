@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:kirmizi_defter/yardimciSayfalar/Fonksiyonlar.dart';
 import '../yardimciSayfalar/sayfaNesne.dart';
-import '../gecisEkranlari/sayfaTatlilar.dart';
 import '../yardimciSayfalar/sayfaOnay.dart';
 
 class havucluKek extends StatelessWidget {
@@ -10,17 +10,7 @@ class havucluKek extends StatelessWidget {
         home: Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.purple,
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back),
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => sayfaGemlik(),
-              ),
-            );
-          },
-        ),
+        leading: Fonksiyon().geriNavigasyon(context),
         title: Text('Havuçlu kek',style: sayfaNesne.metinTipi,),
         actions: <Widget>[
           IconButton(

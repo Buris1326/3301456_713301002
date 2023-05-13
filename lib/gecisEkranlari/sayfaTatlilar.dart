@@ -7,7 +7,6 @@ import 'package:kirmizi_defter/tatliTarifleri/lazBoregi.dart';
 import 'package:kirmizi_defter/tatliTarifleri/misirKeki.dart';
 import 'package:kirmizi_defter/tatliTarifleri/muhallebi.dart';
 import 'package:kirmizi_defter/tatliTarifleri/sarayMuhallebisi.dart';
-import 'package:kirmizi_defter/gecisEkranlari/sayfaKategori.dart';
 import 'package:kirmizi_defter/tatliTarifleri/starbucksKurabiye.dart';
 import 'package:kirmizi_defter/tatliTarifleri/surprizKurabiye.dart';
 import 'package:kirmizi_defter/tatliTarifleri/tahinliCorek.dart';
@@ -17,6 +16,8 @@ import 'package:kirmizi_defter/tatliTarifleri/sutHelvasi.dart';
 import 'package:flutter/material.dart';
 import 'package:kirmizi_defter/tatliTarifleri/havucluKek.dart';
 import 'package:share_plus/share_plus.dart';
+
+import '../yardimciSayfalar/Fonksiyonlar.dart';
 void shareRecipe(String recipeText) {
   Share.share(recipeText);
 }
@@ -27,13 +28,7 @@ class sayfaGemlik extends StatelessWidget {
       home: Scaffold(
           appBar: AppBar(
             backgroundColor: Colors.blueGrey,
-            leading: IconButton(
-              icon: const Icon(Icons.arrow_back),
-              onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => SayfaKategori()));
-              },
-            ),
+            leading: Fonksiyon().geriNavigasyon(context),
             title: Text(
               'Tatlılar',
               style: sayfaNesne.butonMetintipi,

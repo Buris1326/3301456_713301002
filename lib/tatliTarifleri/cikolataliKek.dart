@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kirmizi_defter/gecisEkranlari/sayfaTatlilar.dart';
+import 'package:kirmizi_defter/yardimciSayfalar/Fonksiyonlar.dart';
 import 'package:kirmizi_defter/yardimciSayfalar/sayfaOnay.dart';
 import 'package:kirmizi_defter/yardimciSayfalar/sayfaNesne.dart';
 
@@ -10,17 +10,7 @@ class cikolataliKek extends StatelessWidget {
         home: Scaffold(
           appBar: AppBar(
             backgroundColor: Colors.purple,
-            leading: IconButton(
-              icon: const Icon(Icons.arrow_back),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => sayfaGemlik(),
-                  ),
-                );
-              },
-            ),
+            leading: Fonksiyon().geriNavigasyon(context),
             title: Text('Çikolatalı Kek Tadında Islak Kek',style: sayfaNesne.metinTipi,),
             actions: <Widget>[
               IconButton(

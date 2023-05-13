@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:kirmizi_defter/yardimciSayfalar/Fonksiyonlar.dart';
 import 'package:kirmizi_defter/yardimciSayfalar/sayfaOnay.dart';
-import '../gecisEkranlari/sayfaTatlilar.dart';
 import '../yardimciSayfalar/sayfaNesne.dart';
 
 class muhallebi extends StatelessWidget {
@@ -10,15 +10,7 @@ class muhallebi extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.purple,
-          leading: IconButton(
-            icon: const Icon(Icons.arrow_back),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => sayfaGemlik()),
-              );
-            },
-          ),
+          leading: Fonksiyon().geriNavigasyon(context),
           title: const Text(
             'Muhallebi',
           ),

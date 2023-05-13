@@ -1,5 +1,6 @@
-import 'package:kirmizi_defter/gecisEkranlari/sayfaKategori.dart';
 import 'package:flutter/material.dart';
+
+import '../yardimciSayfalar/Fonksiyonlar.dart';
 
 class SayfaOlcu extends StatefulWidget {
   const SayfaOlcu({Key? key}) : super(key: key);
@@ -19,22 +20,18 @@ class _SayfaOlcuState extends State<SayfaOlcu> {
         backgroundColor: Colors.limeAccent,
         appBar: AppBar(
           backgroundColor: Colors.cyanAccent,
-          leading: IconButton(
-            icon: const Icon(Icons.arrow_back),
-            onPressed: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => SayfaKategori()));
-            },
-          ),
+          leading: Fonksiyon().geriNavigasyon(context),
         ),
-        body: SafeArea(
-          minimum: const EdgeInsets.symmetric(horizontal: 30, vertical: 200),
-          child: Wrap(
-            runAlignment: WrapAlignment.center,
-            direction: Axis.vertical,
+        body: Container(
+          margin: const EdgeInsets.only(top: 150, right: 8, left: 12),
+          child: Container(
+              child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Text('Ölçülecek Malzeme:  '),
-              DropdownButton(
+              const Text('\nÖlçülecek Malzeme:   '),
+              DropdownButton(dropdownColor: Colors.greenAccent,
+                borderRadius: BorderRadius.all(Radius.circular(18)),
+
                 hint: Text(_malzeme),
                 items: const [
                   DropdownMenuItem(
@@ -60,26 +57,39 @@ class _SayfaOlcuState extends State<SayfaOlcu> {
 
                     if (_malzeme == 'Şeker') {
                       _malzemeDetayi = Expanded(
-                        child: Column(
-
-                          children: const [
-                            Text("1 su bardağı şeker = 180 gram"),
-                            Text("3/4 su bardağı şeker = 140 gram"),
-                            Text("2/3 su bardağı şeker = 115 gram"),
-                            Text("1/2 su bardağı şeker = 90 gram"),
-                            Text("1/3 su bardağı şeker = 60 gram"),
-                            Text("1/4 su bardağı şeker = 35 gram"),
-                            Text("1 yemek kaşığı şeker = 15 gram"),
-                            Text("Tepeleme 1 yemek kaşığı şeker= 23 gram"),
-                            Text("1 tatlı kaşığı şeker = 8 gram"),
-                            Text("1 çay kaşığı şeker = 4 gram"),
-                          ],
-                        ),
+                        child: Container(
+                            height: 350,
+                            decoration: const BoxDecoration(
+                                color: Colors.blue,
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(21))),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: const [
+                                Text("1 su bardağı şeker = 180 gram"),
+                                Text("3/4 su bardağı şeker = 140 gram"),
+                                Text("2/3 su bardağı şeker = 115 gram"),
+                                Text("1/2 su bardağı şeker = 90 gram"),
+                                Text("1/3 su bardağı şeker = 60 gram"),
+                                Text("1/4 su bardağı şeker = 35 gram"),
+                                Text("1 yemek kaşığı şeker = 15 gram"),
+                                Text("Tepeleme 1 yemek kaşığı şeker= 23 gram"),
+                                Text("1 tatlı kaşığı şeker = 8 gram"),
+                                Text("1 çay kaşığı şeker = 4 gram"),
+                              ],
+                            )),
                       );
                     } else if (_malzeme == 'Un') {
                       _malzemeDetayi = Expanded(
-                        child: Wrap(
-                          children: const [
+                          child: Container(
+                            height: 150,
+                            decoration: const BoxDecoration(
+                                color: Colors.blue,
+                                borderRadius:
+                                BorderRadius.all(Radius.circular(21))),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: const [
                             Text("1 su bardağı un = 120 gram"),
                             Text("3/4 su bardağı un = 90 gram"),
                             Text("2/3 su bardağı un = 80 gram"),
@@ -89,20 +99,34 @@ class _SayfaOlcuState extends State<SayfaOlcu> {
                             Text("1 yemek kaşığı un = 9 gram"),
                             Text("1 tatlı kaşığı un = 3 gram"),
                           ],
-                        ),
+                        )),
                       );
                     } else if (_malzeme == 'Yağ') {
                       _malzemeDetayi = Expanded(
-                        child: Column(
-                          children: const [
+                          child: Container(
+                            height: 50,
+                            decoration: const BoxDecoration(
+                                color: Colors.blue,
+                                borderRadius:
+                                BorderRadius.all(Radius.circular(15))),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: const [
                             Text("Yağ Ölçüleri Çok Yakında Burada Olacak"),
                           ],
-                        ),
+                        )),
                       );
                     } else if (_malzeme == 'Süt') {
                       _malzemeDetayi = Expanded(
-                        child: Column(
-                          children: const [
+                          child: Container(
+                          height: 250,
+                          decoration: const BoxDecoration(
+                          color: Colors.blue,
+                          borderRadius:
+                          BorderRadius.all(Radius.circular(21))),
+                    child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: const [
                             Text("1 su bardağı süt = 210 gram "),
                             Text("3/4 su bardağı süt = 180 gram"),
                             Text("2/3 su bardağı süt = 150 gram"),
@@ -113,17 +137,17 @@ class _SayfaOlcuState extends State<SayfaOlcu> {
                             Text("1 tatlı kaşığı süt = 5gram"),
                             Text("1 çay kaşığı süt = 2 gram"),
                           ],
-                        ),
+                        )),
                       );
+                    } else {
+                      _malzemeDetayi = Container();
                     }
                   });
                 },
               ),
-
               _malzemeDetayi,
-
             ],
-          ),
+          )),
         ),
       ),
     );

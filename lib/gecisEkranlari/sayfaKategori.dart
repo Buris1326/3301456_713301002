@@ -6,6 +6,7 @@ import 'package:kirmizi_defter/gecisEkranlari/sayfaTuzlular.dart';
 import 'package:kirmizi_defter/gecisEkranlari/tarifEkle.dart';
 import 'package:kirmizi_defter/gecisEkranlari/sayfaOlcu.dart';
 import 'package:flutter/material.dart';
+import '../yardimciSayfalar/Fonksiyonlar.dart';
 import 'sayfaBursa.dart';
 import 'sayfaTatlilar.dart';
 
@@ -18,14 +19,7 @@ class SayfaKategori extends StatelessWidget {
           backgroundColor: Colors.white10,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back),
-          onPressed: () {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => sayfaBursa()));
-
-          },
-        ),
+        leading: Fonksiyon().geriNavigasyon(context),
         title: Text('Canın Ne İstiyor ?'),
       ),
       body: Column(

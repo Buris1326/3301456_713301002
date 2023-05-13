@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:kirmizi_defter/yardimciSayfalar/sayfaNesne.dart';
 
+import '../yardimciSayfalar/Fonksiyonlar.dart';
+
 class SarayMuhallebisi extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: null,
+        leading: Fonksiyon().geriNavigasyon(context),
         backgroundColor: Colors.purple,
         title: const Text('Saray Muhallebisi'),
       ),

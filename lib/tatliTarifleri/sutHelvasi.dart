@@ -1,6 +1,6 @@
+import 'package:kirmizi_defter/yardimciSayfalar/Fonksiyonlar.dart';
 import 'package:kirmizi_defter/yardimciSayfalar/sayfaOnay.dart';
 import 'package:flutter/material.dart';
-import '../gecisEkranlari/sayfaTatlilar.dart';
 import '../yardimciSayfalar/sayfaNesne.dart';
 
 class sutHelvasi extends StatelessWidget {
@@ -10,17 +10,7 @@ class sutHelvasi extends StatelessWidget {
         home: Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.purple,
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back),
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => sayfaGemlik(),
-              ),
-            );
-          },
-        ),
+        leading: Fonksiyon().geriNavigasyon(context),
         title: Text('Süt Helvası',style: sayfaNesne.metinTipi,),
         actions: <Widget>[
           IconButton(
