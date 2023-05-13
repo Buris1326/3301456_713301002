@@ -31,7 +31,7 @@ class sayfaGemlik extends StatelessWidget {
               icon: const Icon(Icons.arrow_back),
               onPressed: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => Sayfa_kategori()));
+                    MaterialPageRoute(builder: (context) => SayfaKategori()));
               },
             ),
             title: Text(
@@ -67,31 +67,13 @@ class sayfaGemlik extends StatelessWidget {
                 Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      Expanded(
-                        child: Container(
-                          margin: const EdgeInsets.all(10),
-                          child: ElevatedButton(
-                            style: sayfaNesne.butonStili,
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          SarayMuhallebisi()));
-                            },
-                            child: Text(
-                              "Saray Muhallebisi",
-                              style: sayfaNesne.butonMetintipi,
-                            ),
-                          ),
-                        ),
-                      ),
+                      sayfaNesne().elevatedButton("Saray Muhallebisi", context, SarayMuhallebisi()),
                       Expanded(child:
                       GestureDetector(
                         onLongPress: () {
                           shareRecipe('Çok lezzetli bir yemek tarifi!');
                         },
-                        child: Icon(
+                        child: const Icon(
                           Icons.beach_access,
                           color: Colors.blue,
                           size: 36.0,
@@ -99,248 +81,17 @@ class sayfaGemlik extends StatelessWidget {
                       ),
                       )
                     ]),
-                Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Expanded(
-                        child: Container(
-                          margin: const EdgeInsets.all(10),
-                          child: ElevatedButton(
-                            style: sayfaNesne.butonStili,
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => havucluKek()));
-                            },
-                            child: Text(
-                              'Havuçlu Kek',
-                              style: sayfaNesne.butonMetintipi,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ]),
-                Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Expanded(
-                        child: Container(
-                          margin: const EdgeInsets.all(10),
-                          child: ElevatedButton(
-                            style: sayfaNesne.butonStili,
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => amonyakliPasta()));
-                            },
-                            child: Text(
-                              'Amonyaklı Pasta',
-                              style: sayfaNesne.butonMetintipi,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ]),
-                Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Expanded(
-                        child: Container(
-                          margin: const EdgeInsets.all(10),
-                          child: ElevatedButton(
-                            style: sayfaNesne.butonStili,
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => misirKeki()));
-                            },
-                            child: Text(
-                              'Mısır Keki',
-                              style: sayfaNesne.butonMetintipi,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ]),
-                Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Expanded(
-                        child: Container(
-                          margin: const EdgeInsets.all(10),
-                          child: ElevatedButton(
-                            style: sayfaNesne.butonStili,
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => cikolataliKek()));
-                            },
-                            child: Text(
-                              'Çikolatalı Kek Tadında Islak Kek',
-                              style: sayfaNesne.butonMetintipi,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ]),
-                Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Expanded(
-                        child: Container(
-                          margin: const EdgeInsets.all(10),
-                          child: ElevatedButton(
-                            style: sayfaNesne.butonStili,
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => surprizKurabiye()));
-                            },
-                            child: Text(
-                              'Sürpriz Kurabiye',
-                              style: sayfaNesne.butonMetintipi,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ]),
-                Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Expanded(
-                        child: Container(
-                          margin: const EdgeInsets.all(10),
-                          child: ElevatedButton(
-                            style: sayfaNesne.butonStili,
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => tahinliCorek()));
-                            },
-                            child: Text(
-                              'Tahinli Çörek',
-                              style: sayfaNesne.butonMetintipi,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ]),
-                Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Expanded(
-                        child: Container(
-                          margin: const EdgeInsets.all(10),
-                          child: ElevatedButton(
-                            style: sayfaNesne.butonStili,
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => starbucksKurabiye()));
-                            },
-                            child: Text(
-                              'Starbucks Kurabiye',
-                              style: sayfaNesne.butonMetintipi,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ]),
-                Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Expanded(
-                        child: Container(
-                          margin: const EdgeInsets.all(10),
-                          child: ElevatedButton(
-                            style: sayfaNesne.butonStili,
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => lazBoregi()));
-                            },
-                            child: Text(
-                              'Laz Böreği',
-                              style: sayfaNesne.butonMetintipi,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ]),
-                Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Expanded(
-                        child: Container(
-                          margin: const EdgeInsets.all(10),
-                          child: ElevatedButton(
-                            style: sayfaNesne.butonStili,
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => firinSutlac()));
-                            },
-                            child: Text(
-                              'Fırın Sütlaç',
-                              style: sayfaNesne.butonMetintipi,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ]),
-                Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Expanded(
-                        child: Container(
-                          margin: const EdgeInsets.all(10),
-                          child: ElevatedButton(
-                            style: sayfaNesne.butonStili,
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => muhallebi()));
-                            },
-                            child: Text(
-                              'Muhallebi',
-                              style: sayfaNesne.butonMetintipi,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ]),
-                Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Expanded(
-                        child: Container(
-                          margin: const EdgeInsets.all(10),
-                          child: ElevatedButton(
-                            style: sayfaNesne.butonStili,
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => trilece()));
-                            },
-                            child: Text(
-                              'Trileçe',
-                              style: sayfaNesne.butonMetintipi,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ]),
+                sayfaNesne().ornek("Havuçlu Kek", context, havucluKek()),
+                sayfaNesne().ornek("Amonyaklı Pasta", context, amonyakliPasta()),
+                sayfaNesne().ornek("Mısır Keki", context, misirKeki()),
+                sayfaNesne().ornek("Çikolatalı Kek Tadında Islak Kek", context, cikolataliKek()),
+                sayfaNesne().ornek("Sürpriz Kurabiye", context, surprizKurabiye()),
+                sayfaNesne().ornek("Tahinli Çörek", context, tahinliCorek()),
+                sayfaNesne().ornek("Starbucks Kurabiye", context, starbucksKurabiye()),
+                sayfaNesne().ornek("Laz Böreği", context, lazBoregi()),
+                sayfaNesne().ornek("Fırında Sütlaç", context, firinSutlac()),
+                sayfaNesne().ornek("Muhallebi", context, muhallebi()),
+                sayfaNesne().ornek("Trileçe", context, trilece()),
               ],
             ),
           )),

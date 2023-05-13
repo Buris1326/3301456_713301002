@@ -23,7 +23,7 @@ class Sayfa_tuzlular extends StatelessWidget {
             icon: const Icon(Icons.arrow_back),
             onPressed: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => Sayfa_kategori()));
+                  MaterialPageRoute(builder: (context) => SayfaKategori()));
             },
           ),
           title: Text('Tatlılar'),

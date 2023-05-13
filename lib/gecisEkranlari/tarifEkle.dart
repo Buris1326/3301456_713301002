@@ -26,7 +26,7 @@ class Tarif_ekle extends StatelessWidget {
                 child: IconButton(
                   onPressed: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => Sayfa_kategori()));
+                        MaterialPageRoute(builder: (context) => SayfaKategori()));
                   },
                   icon: const Icon(Icons.arrow_back_ios_new_outlined),
                   color: Colors.red,

@@ -10,7 +10,7 @@ import 'sayfaBursa.dart';
 import 'sayfaTatlilar.dart';
 
 
-class Sayfa_kategori extends StatelessWidget {
+class SayfaKategori extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -164,7 +164,7 @@ class Sayfa_kategori extends StatelessWidget {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const sayfaIznik()));
+                                builder: (context) => SayfaOlcu()));
                       },
                       child: const Text('Bul',
                           style: TextStyle(color: Colors.black54),

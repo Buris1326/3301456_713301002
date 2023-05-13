@@ -1,20 +1,14 @@
-//Ölçü belirleyici sayfanın kodlarını içeriyor
-
-
-
-
-
 import 'package:kirmizi_defter/gecisEkranlari/sayfaKategori.dart';
 import 'package:flutter/material.dart';
 
-class sayfaIznik extends StatefulWidget {
-  const sayfaIznik({Key? key}) : super(key: key);
+class SayfaOlcu extends StatefulWidget {
+  const SayfaOlcu({Key? key}) : super(key: key);
 
   @override
-  State<sayfaIznik> createState() => _sayfaIznikState();
+  _SayfaOlcuState createState() => _SayfaOlcuState();
 }
 
-class _sayfaIznikState extends State<sayfaIznik> {
+class _SayfaOlcuState extends State<SayfaOlcu> {
   String _malzeme = "";
   Widget _malzemeDetayi = Container();
 
@@ -24,19 +18,24 @@ class _sayfaIznikState extends State<sayfaIznik> {
       home: Scaffold(
         backgroundColor: Colors.limeAccent,
         appBar: AppBar(
-            backgroundColor: Colors.cyanAccent,
-            leading: IconButton(
-                icon: const Icon(Icons.arrow_back),
-                onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Sayfa_kategori()));
-                })),
+          backgroundColor: Colors.cyanAccent,
+          leading: IconButton(
+            icon: const Icon(Icons.arrow_back),
+            onPressed: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => SayfaKategori()));
+            },
+          ),
+        ),
         body: SafeArea(
-          child: Column(
+          minimum: const EdgeInsets.symmetric(horizontal: 30, vertical: 200),
+          child: Wrap(
+            runAlignment: WrapAlignment.center,
+            direction: Axis.vertical,
             children: [
-              const Text('Ölçülecek Malzeme'),
-
+              const Text('Ölçülecek Malzeme:  '),
               DropdownButton(
+                hint: Text(_malzeme),
                 items: const [
                   DropdownMenuItem(
                     value: 'Şeker',
@@ -62,6 +61,7 @@ class _sayfaIznikState extends State<sayfaIznik> {
                     if (_malzeme == 'Şeker') {
                       _malzemeDetayi = Expanded(
                         child: Column(
+
                           children: const [
                             Text("1 su bardağı şeker = 180 gram"),
                             Text("3/4 su bardağı şeker = 140 gram"),
@@ -78,7 +78,7 @@ class _sayfaIznikState extends State<sayfaIznik> {
                       );
                     } else if (_malzeme == 'Un') {
                       _malzemeDetayi = Expanded(
-                        child: Column(
+                        child: Wrap(
                           children: const [
                             Text("1 su bardağı un = 120 gram"),
                             Text("3/4 su bardağı un = 90 gram"),
@@ -121,7 +121,7 @@ class _sayfaIznikState extends State<sayfaIznik> {
               ),
 
               _malzemeDetayi,
-              //Text(_malzeme),
+
             ],
           ),
         ),

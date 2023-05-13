@@ -29,7 +29,7 @@ class sayfaNilufer extends StatelessWidget {
             child: IconButton(
               onPressed: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => Sayfa_kategori()));
+                    MaterialPageRoute(builder: (context) => SayfaKategori()));
               },
               icon: const Icon(Icons.sentiment_very_dissatisfied),
               color: Colors.red,
