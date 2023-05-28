@@ -1,5 +1,6 @@
 //tatlı seçeneklerinin bulunduğu sayfanın kodlarını içerir
 
+import 'package:kirmizi_defter/functions/navigationFunction.dart';
 import 'package:kirmizi_defter/tatliTarifleri/amonyakliPasta.dart';
 import 'package:kirmizi_defter/tatliTarifleri/cikolataliKek.dart';
 import 'package:kirmizi_defter/tatliTarifleri/firinSutlac.dart';
@@ -17,7 +18,6 @@ import 'package:flutter/material.dart';
 import 'package:kirmizi_defter/tatliTarifleri/havucluKek.dart';
 import 'package:share_plus/share_plus.dart';
 
-import '../yardimciSayfalar/Fonksiyonlar.dart';
 void shareRecipe(String recipeText) {
   Share.share(recipeText);
 }
@@ -28,7 +28,7 @@ class sayfaGemlik extends StatelessWidget {
       home: Scaffold(
           appBar: AppBar(
             backgroundColor: Colors.blueGrey,
-            leading: Fonksiyon().geriNavigasyon(context),
+            leading: NavigationFunction().geriNavigasyon(context),
             title: Text(
               'Tatlılar',
               style: sayfaNesne.butonMetintipi,

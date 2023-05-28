@@ -5,7 +5,7 @@
 
 import 'package:kirmizi_defter/kayitOl_sifreYenileme/sayfaAlt%C4%B1parmak.dart';
 import 'package:flutter/material.dart';
-import '../yardimciSayfalar/Fonksiyonlar.dart';
+import '../functions/navigationFunction.dart';
 
 class sayfaTrilye extends StatelessWidget {
   @override
@@ -14,7 +14,7 @@ class sayfaTrilye extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.transparent,
-          leading: Fonksiyon().geriNavigasyon(context),
+          leading: NavigationFunction().geriNavigasyon(context),
           title: Text('Şifremi Unuttum'),
           centerTitle: true,          //Başlığı başlık kısmında ortalar = true
         ),

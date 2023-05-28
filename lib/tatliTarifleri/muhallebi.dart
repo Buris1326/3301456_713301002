@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kirmizi_defter/yardimciSayfalar/Fonksiyonlar.dart';
+import 'package:kirmizi_defter/functions/navigationFunction.dart';
 import 'package:kirmizi_defter/yardimciSayfalar/sayfaOnay.dart';
 import '../yardimciSayfalar/sayfaNesne.dart';
 
@@ -10,7 +10,7 @@ class muhallebi extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.purple,
-          leading: Fonksiyon().geriNavigasyon(context),
+          leading: NavigationFunction().geriNavigasyon(context),
           title: const Text(
             'Muhallebi',
           ),

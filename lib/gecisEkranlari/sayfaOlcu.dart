@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../yardimciSayfalar/Fonksiyonlar.dart';
-
+import 'package:kirmizi_defter/functions/navigationFunction.dart';
 class SayfaOlcu extends StatefulWidget {
   const SayfaOlcu({Key? key}) : super(key: key);
 
@@ -20,7 +18,7 @@ class _SayfaOlcuState extends State<SayfaOlcu> {
         backgroundColor: Colors.limeAccent,
         appBar: AppBar(
           backgroundColor: Colors.cyanAccent,
-          leading: Fonksiyon().geriNavigasyon(context),
+          leading: NavigationFunction().geriNavigasyon(context),
         ),
         body: Container(
           margin: const EdgeInsets.only(top: 150, right: 8, left: 12),

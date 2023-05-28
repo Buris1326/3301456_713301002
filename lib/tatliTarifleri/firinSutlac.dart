@@ -1,6 +1,6 @@
+import 'package:kirmizi_defter/functions/navigationFunction.dart';
 import 'package:kirmizi_defter/yardimciSayfalar/sayfaOnay.dart';
 import 'package:flutter/material.dart';
-import '../yardimciSayfalar/Fonksiyonlar.dart';
 import '../yardimciSayfalar/sayfaNesne.dart';
 
 class firinSutlac extends StatelessWidget {
@@ -10,7 +10,7 @@ class firinSutlac extends StatelessWidget {
         home: Scaffold(
           appBar: AppBar(
             backgroundColor: Colors.purple,
-            leading: Fonksiyon().geriNavigasyon(context),
+            leading: NavigationFunction().geriNavigasyon(context),
             title: Text('Fırın Sütlaç',style: sayfaNesne.metinTipi,),
             actions: <Widget>[
               IconButton(

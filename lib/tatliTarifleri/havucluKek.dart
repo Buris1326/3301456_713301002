@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kirmizi_defter/yardimciSayfalar/Fonksiyonlar.dart';
+import 'package:kirmizi_defter/functions/navigationFunction.dart';
 import '../yardimciSayfalar/sayfaNesne.dart';
 import '../yardimciSayfalar/sayfaOnay.dart';
 
@@ -10,7 +10,7 @@ class havucluKek extends StatelessWidget {
         home: Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.purple,
-        leading: Fonksiyon().geriNavigasyon(context),
+        leading: NavigationFunction().geriNavigasyon(context),
         title: Text('Havuçlu kek',style: sayfaNesne.metinTipi,),
         actions: <Widget>[
           IconButton(

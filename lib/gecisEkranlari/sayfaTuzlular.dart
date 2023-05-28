@@ -12,7 +12,7 @@ import 'package:kirmizi_defter/gecisEkranlari/sayfaKategori.dart';
 import 'package:kirmizi_defter/yardimciSayfalar/sayfaNil%C3%BCfer.dart';
 import 'package:flutter/material.dart';
 
-class Sayfa_tuzlular extends StatelessWidget {
+class SayfaTuzlular extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
