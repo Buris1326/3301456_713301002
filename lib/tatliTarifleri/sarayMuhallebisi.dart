@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:kirmizi_defter/functions/navigationFunction.dart';
-import 'package:kirmizi_defter/yardimciSayfalar/sayfaNesne.dart';
+import 'package:kirmizidefter/functions/navigationFunction.dart';
+import 'package:kirmizidefter/yardimciSayfalar/sayfaNesne.dart';
 
 class SarayMuhallebisi extends StatelessWidget {
   @override

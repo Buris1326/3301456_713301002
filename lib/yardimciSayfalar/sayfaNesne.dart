@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
 
+
+
+
+
 class sayfaNesne {
   static final TextStyle metinTipi = TextStyle(
     fontSize: 17.5, // font boyutu

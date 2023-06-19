@@ -1,176 +1,162 @@
-//Giriş Ekranının Kodlarını İçerir
-
-
-
-import 'package:kirmizi_defter/functions/Fonksiyonlar.dart';
-import 'package:kirmizi_defter/kayitOl_sifreYenileme/sayfaKursunlu.dart';
-import 'package:kirmizi_defter/kayitOl_sifreYenileme/sayfaTrilye.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
-import '../yardimciSayfalar/sayfaYildirim.dart';
+import 'package:kirmizidefter/Authentication.dart';
+import 'package:lottie/lottie.dart';
+import 'package:kirmizidefter/kayitOl_sifreYenileme/ForgotPassword.dart';
+import 'package:kirmizidefter/kayitOl_sifreYenileme/SignUpScreen.dart';
 
-class sayfaBursa extends StatelessWidget {
+class SayfaBursa extends StatelessWidget {
+  String user_email = "";
+  String user_password = "";
+
+
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.white10,
-        body: Form(
-        child: Container(
-          margin: const EdgeInsets.only(top: 120),
-          child: Column(
-            children: <Widget>[
-              Row(
+        backgroundColor: Color(0xFF1F1F1F),
+        body: Center(
+          child: SingleChildScrollView(
+            child: Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: const <Widget>[
+                children: <Widget>[
+                  SizedBox(height: 100),
+                  Lottie.asset(
+                    'assets/animations/loading_animation.json',
+                    height: 200,
+                    width: 200,
+                    fit: BoxFit.cover,
+                  ),
+                  SizedBox(height: 20),
                   Text(
                     'Kırmızı Defter',
-                    style: TextStyle(fontSize: 25.0,
-                    color: Colors.deepOrangeAccent),
-                  )
-                ],
-              ),
-              Row(         //kullanıcı adı
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Expanded(
-                    flex: 1,
-                    child: Container(
-                      margin: const EdgeInsets.only(left: 20, top: 20),
-                      child: const Text(
-                        'Kullanıcı Adı:',
-                        style: TextStyle(fontSize: 18, color: Colors.cyanAccent),
-                      ),
+                    style: TextStyle(
+                      fontSize: 30.0,
+                      color: Colors.deepOrangeAccent,
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
-                  Expanded(      //kullanıcı adı kutucuk
-                      flex: 2,
-                      child: Container(
-                        margin: const EdgeInsets.only(right: 20, top: 20),
-                        child: TextFormField(
-                          decoration: DecorationFunction().textFormFieldDecorations("Lütfen Kullanıcı Adınızı Giriniz", "kirmiziDefter16"),
-                          style:TextStyle(
-                            color: Colors.blueGrey,
-                            //backgroundColor: Colors.blueGrey
-                          ) ,
-                        ),
-                      ))
-                ],
-              ),
-              Row(          //şifre
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Expanded(
-                    flex: 1,
-                    child: Container(
-                      margin: const EdgeInsets.only(top: 20, left: 20),
-                      child: const Text(
-                        'Şifre',
-                        style: TextStyle(fontSize: 18,
-                            color: Colors.cyanAccent ),
+                  SizedBox(height: 40),
+                  TextFormField(
+                    onChanged: (value) {
+                      user_email = value;
+                    },
+                    decoration: InputDecoration(
+                      hintText: "Kullanıcı Adınızı Giriniz",
+                      hintStyle: TextStyle(color: Colors.grey),
+                      filled: true,
+                      fillColor: Colors.white,
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                        borderSide: BorderSide.none,
                       ),
                     ),
+                    style: TextStyle(color: Colors.black),
                   ),
-                  Expanded(          //şifre kutucuk
-                    flex: 2,
-                    child: Container(
-                      margin: const EdgeInsets.only(right: 20, top: 20),
-                      child: TextFormField(
-                        decoration: DecorationFunction().textFormFieldDecorations("Lütfen Şifrenizi Giriniz:", "******"),
+                  SizedBox(height: 20),
+                  TextFormField(
+                    onChanged: (value) {
+                      user_password = value;
+                    },
+                    decoration: InputDecoration(
+                      hintText: "Şifrenizi Giriniz",
+                      hintStyle: TextStyle(color: Colors.grey),
+                      filled: true,
+                      fillColor: Colors.white,
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                        borderSide: BorderSide.none,
                       ),
                     ),
-                  )
-                ],
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Expanded(         //Şifre yenileme sayfasına gider
-                      child: Container(
-                    child: TextButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => sayfaTrilye()),
-                        );
-                      },
-                      child: const Text(
-                        'Şifremi Unuttum',
-                        style: TextStyle(
-                          fontSize: 16.0,
-                          color: Colors.cyanAccent,
-                        ),
-                      ),
-                    ),
-                  )),
-                  Expanded(         //kayıt ol sayfasına gider
-                      child: Container(
-                    child: TextButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => sayfaKursunlu()),
-                        );
-                      },
-                      child: const Text(
-                        'Kayıt Ol',
-                        style: TextStyle(
-                          fontSize: 16.0,
-                          color: Colors.cyanAccent,
-                        ),
-                      ),
-                    ),
-                  )),
-                ],
-              ),
-              Row(          //önce sayfaYildirim a 3 sn sonra da sayfaMudanya ya gider
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children:[
-                    Expanded(
-                      child: Container(
-                        margin: const EdgeInsets.all(20),
-                        child: ElevatedButton(
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.black38,
-                            foregroundColor: Colors.cyan,
-                          ),
-                          onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(builder: (context) => SayfaYildirim(child: Container())),
-                            );
-                          },
-
-                          child: const Text(
-                            'Giriş Yap',
-                            style: TextStyle(
-                                color: Colors.cyanAccent, fontSize: 12.0),
+                    style: TextStyle(color: Colors.black),
+                  ),
+                  SizedBox(height: 20),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      TextButton(
+                        onPressed: () {
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => ForgotPassword(),
+                            ),
+                          );
+                        },
+                        child: Text(
+                          'Şifremi Unuttum',
+                          style: TextStyle(
+                            fontSize: 16.0,
+                            color: Colors.deepOrangeAccent,
                           ),
                         ),
                       ),
-                    ),
-
-
-                  ]),
-
-              Row(            //Sürekli dönüp duran şey
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: const <Widget>[
-                  Expanded(
-                      child: Center(
-                        child: SpinKitFoldingCube(
-                          color: Colors.cyanAccent,
-                          size: 95,
+                      TextButton(
+                        onPressed: () {
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => SignupScreen(),
+                            ),
+                          );
+                        },
+                        child: Text(
+                          'Kayıt Ol',
+                          style: TextStyle(
+                            fontSize: 16.0,
+                            color: Colors.deepOrangeAccent,
+                          ),
                         ),
-                      ))
-                ],
-              ),],
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 20),
+                  Container(
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10.0),
+                      gradient: LinearGradient(
+                        colors: [Colors.deepOrangeAccent, Colors.orange],
+                        begin: Alignment.centerLeft,
+                        end: Alignment.centerRight,
+                      ),
+                    ),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(29),
+                      child: TextButton(
+                        style: ButtonStyle(
+                          backgroundColor:
+                          MaterialStateProperty.all<Color>(Colors.tealAccent),
+                          shape:
+                          MaterialStateProperty.all<RoundedRectangleBorder>(
+                            RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(29.0),
+                              side: BorderSide(color: Colors.black),
+                            ),
+                          ),
+                        ),
+                        onPressed: () {
+                          FlutterFireAuthService authService = FlutterFireAuthService(FirebaseAuth.instance);
+                          authService.logIn(user_email, user_password, context);
 
+                        },
+                        child: Text(
+                          "Bişe Bişe",
+                          style: TextStyle(color: Colors.green),
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 40),
+                ],
+              ),
+            ),
           ),
         ),
-      ),),
+      ),
     );
   }
 }

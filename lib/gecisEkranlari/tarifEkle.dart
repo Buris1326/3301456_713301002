@@ -1,40 +1,95 @@
-//Tarif ekleyebileceğin sayfanın kodlarını içeriyor
-
-
-
-import 'package:kirmizi_defter/gecisEkranlari/sayfaKategori.dart';
 import 'package:flutter/material.dart';
+import '../SQFlite/TarifDüzenleme.dart';
+import '../SQFlite/TarifEkleme.dart';
+import '../SQFlite/TarifSilme.dart';
+import '../services/db utils.dart';
 
-class Tarif_ekle extends StatelessWidget {
+
+
+class TarifYerel extends StatefulWidget {
+  TarifYerel({Key? key, required this.title}) : super(key: key);
+  final String title;
+
+  @override
+  _TarifYerelState createState() => _TarifYerelState();
+}
+
+class _TarifYerelState extends State<TarifYerel> {
+  List<Map<String, dynamic>> _Tariflerlar = [];
+
+  @override
+  void initState() {
+    super.initState();
+    _getTariflerlar();
+  }
+
+  void _getTariflerlar() async {
+    List<Map<String, dynamic>> Tariflerlar = await DatabaseHelper.instance.queryAllRows();
+    setState(() {
+      _Tariflerlar = Tariflerlar;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-          body: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const Text('Kendi Tariflerini Ekleyebileceğin Kısım Çok Yakında Aktif Olacak Finale Kadar Beklemelisin :((',
-                  style: TextStyle(
-                    //height: 12,
-                    fontWeight: FontWeight.w900,
-                    fontSize: 20,
-                  )),
-              const SizedBox(height: 20),
-              SizedBox(
-                width: 300,
-                height: 300,
-                child: IconButton(
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => SayfaKategori()));
-                  },
-                  icon: const Icon(Icons.arrow_back_ios_new_outlined),
-                  color: Colors.red,
-                  iconSize: 400,
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.title),
+      ),
+      body: ListView.builder(
+        itemCount: _Tariflerlar.length,
+        itemBuilder: (context, index) {
+          return ListTile(
+            title: Text(_Tariflerlar[index]['baslik']),
+            subtitle: Text(_Tariflerlar[index]['malzemeler']),
+            onTap: () {
+              // Tarifler düzenleme sayfasına yönlendirme
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => TariflerDuzenlemeSayfasi(tarifler: _Tariflerlar[index]),
                 ),
-              ),
-            ],
-          )),
+              ).then((value) {
+                _getTariflerlar();
+              });
+            },
+          );
+        },
+      ),
+      floatingActionButton: Row(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          FloatingActionButton(
+            onPressed: () {
+              // Yeni Tarifler ekleme sayfasına yönlendirme
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => TariflerEklemeSayfasi(),
+                ),
+              ).then((value) {
+                _getTariflerlar();
+              });
+            },
+            child: Icon(Icons.add),
+          ),
+          SizedBox(width: 10),
+          FloatingActionButton(
+            onPressed: () {
+              // Tarifler silme sayfasına yönlendirme
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => TariflerSilmeSayfasi(),
+                ),
+              ).then((value) {
+                _getTariflerlar();
+              });
+            },
+            child: Icon(Icons.delete),
+          ),
+        ],
+      ),
     );
   }
 }

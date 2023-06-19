@@ -43,7 +43,7 @@ class sayfaOnay extends StatelessWidget {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => sayfaBursa()));
+                              builder: (context) => SayfaBursa()));
                     },
                     child: const Text(
                       'Değerlendirmen İçin Teşekkürler',

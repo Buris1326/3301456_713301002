@@ -1,139 +1,224 @@
-//Kategorilerin bulunduğu sayfa
-
-import 'package:kirmizi_defter/functions/navigationFunction.dart';
-import 'package:kirmizi_defter/gecisEkranlari/kiler.dart';
+import 'package:flutter/material.dart';
+import 'package:kirmizi_defter/gecisEkranlari/sayfaOlcu.dart';
+import 'package:kirmizi_defter/gecisEkranlari/sayfaTatlilar.dart';
 import 'package:kirmizi_defter/gecisEkranlari/sayfaTuzlular.dart';
 import 'package:kirmizi_defter/gecisEkranlari/tarifEkle.dart';
-import 'package:kirmizi_defter/gecisEkranlari/sayfaOlcu.dart';
-import 'package:flutter/material.dart';
-import 'sayfaTatlilar.dart';
+
+
 
 class SayfaKategori extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        home: Scaffold(
-            backgroundColor: Colors.white10,
-            appBar: AppBar(
-              backgroundColor: Colors.transparent,
-              leading: NavigationFunction().geriNavigasyon(context),
-              title: const Text('Canın Ne İstiyor ?'),
+      home: Scaffold(
+        backgroundColor: Colors.grey[800], // Arka plan rengi
+
+        appBar: AppBar(
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+          centerTitle: true,
+          title: const Text(
+            'Canın Ne İstiyor?',
+            style: TextStyle(
+              color: Colors.black, // Başlık rengi
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
             ),
-            body: Column(
-              children: <Widget>[
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Expanded(
-                      flex: 1,
-                      child: Container(
-                        margin: const EdgeInsets.only(left: 20, top: 20),
-                        child: Row(
-                          children: const [
-                            Text(
-                              'Tatlılar: ',
-                              style: TextStyle(
-                                  fontSize: 18, color: Colors.limeAccent),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      flex: 2,
-                      child: Container(
-                          margin: const EdgeInsets.only(right: 20, top: 20),
-                          child: NavigationFunction().elevatedButton(
-                              Colors.lightGreenAccent,
-                              sayfaGemlik(),
-                              "Tatlılar",
-                              context)),
-                    ),
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Expanded(
-                      flex: 1,
-                      child: Container(
-                        margin: const EdgeInsets.only(left: 20, top: 20),
-                        child: const Text(
-                          'Tuzlular: ',
-                          style:
-                              TextStyle(fontSize: 18, color: Colors.limeAccent),
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                        flex: 2,
-                        child: NavigationFunction().elevatedButton(
-                            Colors.deepOrangeAccent,
-                            SayfaTuzlular(),
-                            "Tuzlular",
-                            context))
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Expanded(
-                      flex: 1,
-                      child: Container(
-                        margin: const EdgeInsets.only(left: 20, top: 20),
-                        child: const Text(
-                          'Kendi Tarifini Ekle',
-                          style:
-                              TextStyle(fontSize: 18, color: Colors.limeAccent),
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                        flex: 2,
-                        child: NavigationFunction().elevatedButton(Colors.purpleAccent, Tarif_ekle(), "Ekle", context)),
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Expanded(
-                      flex: 1,
-                      child: Container(
-                        margin: const EdgeInsets.only(left: 20, top: 20),
-                        child: const Text(
-                          'Ölçüsünü Bul',
-                          style:
-                              TextStyle(fontSize: 18, color: Colors.limeAccent),
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                        flex: 2,
-                        child: NavigationFunction().elevatedButton(Colors.deepPurpleAccent, SayfaOlcu(), "Bul", context)),
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Expanded(
-                      flex: 1,
-                      child: Container(
-                        margin: const EdgeInsets.only(left: 20, top: 20),
-                        child: const Text(
-                          'Evdekilerle tarif',
-                          style:
-                          TextStyle(fontSize: 18, color: Colors.limeAccent),
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                        flex: 2,
-                        child: NavigationFunction().elevatedButton(Colors.greenAccent, Kiler(), "Kiler", context)),
+          ),
+        ),
 
-
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(builder: (context) => SayfaTatlilar())
+                  );
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.deepPurpleAccent, // Buton arka plan rengi
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 40),
+                  textStyle: const TextStyle(
+                    color: Colors.white, // Buton metin rengi
+                    fontSize: 18,
+                  ),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Icon(
+                      Icons.cake_outlined, // Tatlı simgesi
+                      color: Colors.white,
+                    ),
+                    const SizedBox(width: 10),
+                    const Text('Tatlılar'),
                   ],
                 ),
-              ],
-            )));
+              ),
+              const SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => SayfaTuzlular()),
+                  );
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.orangeAccent, // Buton arka plan rengi
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 40),
+                  textStyle: const TextStyle(
+                    color: Colors.white, // Buton metin rengi
+                    fontSize: 18,
+                  ),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Icon(
+                      Icons.fastfood_outlined, // Tuzlu simgesi
+                      color: Colors.white,
+                    ),
+                    const SizedBox(width: 10),
+                    const Text('Tuzlular'),
+                  ],
+                ),
+              ),
+              const SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => TarifYerel()),
+                  );
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.tealAccent, // Buton arka plan rengi
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 40),
+                  textStyle: const TextStyle(
+                    color: Colors.black, // Buton metin rengi
+                    fontSize: 18,
+                  ),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Icon(
+                      Icons.add_box_outlined, // Ekle simgesi
+                      color: Colors.black,
+                    ),
+                    const SizedBox(width: 10),
+                    const Text('Kendi Tarifini Ekle'),
+                  ],
+                ),
+              ),
+              const SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const SayfaOlcu()),
+                  );
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.redAccent, // Buton arka plan rengi
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 40),
+                  textStyle: const TextStyle(
+                    color: Colors.white, // Buton metin rengi
+                    fontSize: 18,
+                  ),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Icon(
+                      Icons.search_outlined, // Ölçü simgesi
+                      color: Colors.white,
+                    ),
+                    const SizedBox(width: 10),
+                    const Text('Ölçüsünü Bul'),
+                  ],
+                ),
+              ),
+              const SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Kiler()),
+                  );
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.greenAccent, // Buton arka plan rengi
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 40),
+                  textStyle: const TextStyle(
+                    color: Colors.black, // Buton metin rengi
+                    fontSize: 18,
+                  ),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Icon(
+                      Icons.shopping_cart_outlined, // Kiler simgesi
+                      color: Colors.black,
+                    ),
+                    const SizedBox(width: 10),
+                    const Text('Evdekilerle Tarif'),
+                  ],
+                ),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => RecipeAddPage()),
+                  );
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.greenAccent, // Buton arka plan rengi
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 40),
+                  textStyle: const TextStyle(
+                    color: Colors.black, // Buton metin rengi
+                    fontSize: 18,
+                  ),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Icon(
+                      Icons.shopping_cart_outlined, // Kiler simgesi
+                      color: Colors.black,
+                    ),
+                    const SizedBox(width: 10),
+                    const Text('DENEME001'),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }

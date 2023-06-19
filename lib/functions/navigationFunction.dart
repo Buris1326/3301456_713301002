@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import '../gecisEkranlari/sayfaKategori.dart';
+
 
 class NavigationFunction {
 
@@ -32,6 +34,18 @@ class NavigationFunction {
         },
         child: Text(icerik),
       ),
+    );
+  }
+
+  IconButton sayfaKategoriGecis (context){
+    return IconButton(
+      icon: const Icon(Icons.arrow_back),
+      onPressed: () {
+        Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(builder: (context) => SayfaKategori())
+        );
+      },
     );
   }
 

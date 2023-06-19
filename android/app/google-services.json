@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "986616486894",
+    "project_id": "redbook-7c6d1",
+    "storage_bucket": "redbook-7c6d1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:986616486894:android:a58fcfc93662efce1eccff",
+        "android_client_info": {
+          "package_name": "com.example.deneme1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "986616486894-2f06t864dpm758jass7gnjdcck89jq1d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA88Bn2NGSVzw_f9Ttoy-COqezPO074KaY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "986616486894-2f06t864dpm758jass7gnjdcck89jq1d.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "986616486894-d06v81sj40r685k77jaqi0snlgobsn5m.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.deneme1"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

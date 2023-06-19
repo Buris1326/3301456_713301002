@@ -1,34 +1,31 @@
 //tatlı seçeneklerinin bulunduğu sayfanın kodlarını içerir
 
-import 'package:kirmizi_defter/functions/navigationFunction.dart';
-import 'package:kirmizi_defter/tatliTarifleri/amonyakliPasta.dart';
-import 'package:kirmizi_defter/tatliTarifleri/cikolataliKek.dart';
-import 'package:kirmizi_defter/tatliTarifleri/firinSutlac.dart';
-import 'package:kirmizi_defter/tatliTarifleri/lazBoregi.dart';
-import 'package:kirmizi_defter/tatliTarifleri/misirKeki.dart';
-import 'package:kirmizi_defter/tatliTarifleri/muhallebi.dart';
-import 'package:kirmizi_defter/tatliTarifleri/sarayMuhallebisi.dart';
-import 'package:kirmizi_defter/tatliTarifleri/starbucksKurabiye.dart';
-import 'package:kirmizi_defter/tatliTarifleri/surprizKurabiye.dart';
-import 'package:kirmizi_defter/tatliTarifleri/tahinliCorek.dart';
-import 'package:kirmizi_defter/tatliTarifleri/trilece.dart';
-import 'package:kirmizi_defter/yardimciSayfalar/sayfaNesne.dart';
-import 'package:kirmizi_defter/tatliTarifleri/sutHelvasi.dart';
+import 'package:kirmizidefter/functions/navigationFunction.dart';
+import 'package:kirmizidefter/tatliTarifleri/amonyakliPasta.dart';
+import 'package:kirmizidefter/tatliTarifleri/cikolataliKek.dart';
+import 'package:kirmizidefter/tatliTarifleri/firinSutlac.dart';
+import 'package:kirmizidefter/tatliTarifleri/lazBoregi.dart';
+import 'package:kirmizidefter/tatliTarifleri/misirKeki.dart';
+import 'package:kirmizidefter/tatliTarifleri/muhallebi.dart';
+import 'package:kirmizidefter/tatliTarifleri/sarayMuhallebisi.dart';
+import 'package:kirmizidefter/tatliTarifleri/starbucksKurabiye.dart';
+import 'package:kirmizidefter/tatliTarifleri/surprizKurabiye.dart';
+import 'package:kirmizidefter/tatliTarifleri/tahinliCorek.dart';
+import 'package:kirmizidefter/tatliTarifleri/trilece.dart';
+import 'package:kirmizidefter/yardimciSayfalar/sayfaNesne.dart';
+import 'package:kirmizidefter/tatliTarifleri/sutHelvasi.dart';
 import 'package:flutter/material.dart';
-import 'package:kirmizi_defter/tatliTarifleri/havucluKek.dart';
-import 'package:share_plus/share_plus.dart';
+import 'package:kirmizidefter/tatliTarifleri/havucluKek.dart';
 
-void shareRecipe(String recipeText) {
-  Share.share(recipeText);
-}
-class sayfaGemlik extends StatelessWidget {
+
+class SayfaTatlilar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
           appBar: AppBar(
             backgroundColor: Colors.blueGrey,
-            leading: NavigationFunction().geriNavigasyon(context),
+            leading: NavigationFunction().sayfaKategoriGecis(context),
             title: Text(
               'Tatlılar',
               style: sayfaNesne.butonMetintipi,
@@ -65,9 +62,6 @@ class sayfaGemlik extends StatelessWidget {
                       sayfaNesne().elevatedButton("Saray Muhallebisi", context, SarayMuhallebisi()),
                       Expanded(child:
                       GestureDetector(
-                        onLongPress: () {
-                          shareRecipe('Çok lezzetli bir yemek tarifi!');
-                        },
                         child: const Icon(
                           Icons.beach_access,
                           color: Colors.blue,

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kirmizi_defter/functions/navigationFunction.dart';
+import 'package:kirmizidefter/functions/navigationFunction.dart';
 import '../yardimciSayfalar/sayfaNesne.dart';
 import '../yardimciSayfalar/sayfaOnay.dart';
 

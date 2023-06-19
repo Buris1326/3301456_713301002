@@ -8,8 +8,8 @@
 
 
 
-import 'package:kirmizi_defter/gecisEkranlari/sayfaKategori.dart';
-import 'package:kirmizi_defter/yardimciSayfalar/sayfaNil%C3%BCfer.dart';
+import 'package:kirmizidefter/functions/navigationFunction.dart';
+import 'package:kirmizidefter/yardimciSayfalar/sayfaNil%C3%BCfer.dart';
 import 'package:flutter/material.dart';
 
 class SayfaTuzlular extends StatelessWidget {
@@ -19,14 +19,8 @@ class SayfaTuzlular extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.blueGrey,
-          leading: IconButton(
-            icon: const Icon(Icons.arrow_back),
-            onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => SayfaKategori()));
-            },
-          ),
-          title: Text('Tatlılar'),
+          leading: NavigationFunction().sayfaKategoriGecis(context),
+          title: Text('Tuzlular'),
         ),
         body: Column(
           children: <Widget>[

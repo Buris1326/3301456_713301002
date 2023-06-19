@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:kirmizi_defter/API/Spoonacular.dart';
-
+import '../API/Spoonacular.dart';
 import '../functions/Fonksiyonlar.dart';
 import '../functions/navigationFunction.dart';
+
 
 class Kiler extends StatefulWidget {
   @override
