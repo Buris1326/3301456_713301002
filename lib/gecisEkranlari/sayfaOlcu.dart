@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kirmizidefter/functions/navigationFunction.dart';
+import 'package:kirmizi_defter/functions/navigationFunction.dart';
 
 class SayfaOlcu extends StatefulWidget {
   const SayfaOlcu({Key? key}) : super(key: key);

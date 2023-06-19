@@ -7,8 +7,8 @@ import '../services/db utils.dart';
 
 
 class TarifYerel extends StatefulWidget {
-  TarifYerel({Key? key, required this.title}) : super(key: key);
-  final String title;
+
+
 
   @override
   _TarifYerelState createState() => _TarifYerelState();
@@ -34,7 +34,7 @@ class _TarifYerelState extends State<TarifYerel> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Text("Tarif ekleme"),
       ),
       body: ListView.builder(
         itemCount: _Tariflerlar.length,

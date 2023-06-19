@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kirmizidefter/services/db%20utils.dart';
+import 'package:kirmizi_defter/services/db%20utils.dart';
 
 class TariflerDuzenlemeSayfasi extends StatefulWidget {
   final Map<String, dynamic> tarifler;
@@ -11,7 +11,7 @@ class TariflerDuzenlemeSayfasi extends StatefulWidget {
 }
 
 class _TariflerDuzenlemeSayfasiState extends State<TariflerDuzenlemeSayfasi> {
-  late TextEditingController _idController;
+
   late TextEditingController _baslikController;
   late TextEditingController _malzemelerController;
   late TextEditingController _yapilisController;
@@ -27,7 +27,7 @@ class _TariflerDuzenlemeSayfasiState extends State<TariflerDuzenlemeSayfasi> {
 
   @override
   void dispose() {
-    _idController.dispose();
+
     _baslikController.dispose();
     _malzemelerController.dispose();
     _yapilisController.dispose();
@@ -44,12 +44,7 @@ class _TariflerDuzenlemeSayfasiState extends State<TariflerDuzenlemeSayfasi> {
         padding: EdgeInsets.all(16.0),
         child: Column(
           children: [
-            TextField(
-              controller: _idController,
-              decoration: InputDecoration(
-                labelText: 'ID',
-              ),
-            ),
+
             TextField(
               controller: _baslikController,
               decoration: InputDecoration(

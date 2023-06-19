@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:kirmizidefter/functions/navigationFunction.dart';
-import 'package:kirmizidefter/yardimciSayfalar/sayfaOnay.dart';
-import 'package:kirmizidefter/yardimciSayfalar/sayfaNesne.dart';
+import 'package:kirmizi_defter/functions/navigationFunction.dart';
+import 'package:kirmizi_defter/yardimciSayfalar/sayfaOnay.dart';
+import 'package:kirmizi_defter/yardimciSayfalar/sayfaNesne.dart';
 
 class cikolataliKek extends StatelessWidget {
   @override

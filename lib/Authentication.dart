@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 
 import 'package:firebase_auth/firebase_auth.dart';
 
-import 'package:kirmizidefter/gecisEkranlari/sayfaBursa.dart';
-import 'package:kirmizidefter/yardimciSayfalar/sayfaYildirim.dart';
+import 'package:kirmizi_defter/gecisEkranlari/sayfaBursa.dart';
+import 'package:kirmizi_defter/yardimciSayfalar/sayfaYildirim.dart';
 
 class FlutterFireAuthService {
   final FirebaseAuth _firebaseAuth;

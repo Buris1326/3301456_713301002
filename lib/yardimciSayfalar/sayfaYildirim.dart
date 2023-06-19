@@ -4,7 +4,7 @@
 
 
 import 'dart:async';
-import 'package:kirmizidefter/gecisEkranlari/sayfaKategori.dart';
+import 'package:kirmizi_defter/gecisEkranlari/sayfaKategori.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 

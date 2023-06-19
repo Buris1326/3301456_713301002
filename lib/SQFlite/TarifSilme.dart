@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kirmizidefter/services/db%20utils.dart';
+import 'package:kirmizi_defter/services/db%20utils.dart';
 
 class TariflerSilmeSayfasi extends StatelessWidget {
   final TextEditingController _baslikController = TextEditingController();

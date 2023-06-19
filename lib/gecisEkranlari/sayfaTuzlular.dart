@@ -8,8 +8,8 @@
 
 
 
-import 'package:kirmizidefter/functions/navigationFunction.dart';
-import 'package:kirmizidefter/yardimciSayfalar/sayfaNil%C3%BCfer.dart';
+import 'package:kirmizi_defter/functions/navigationFunction.dart';
+import 'package:kirmizi_defter/yardimciSayfalar/sayfaNil%C3%BCfer.dart';
 import 'package:flutter/material.dart';
 
 class SayfaTuzlular extends StatelessWidget {

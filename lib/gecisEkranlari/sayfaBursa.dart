@@ -1,9 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:kirmizidefter/Authentication.dart';
+import 'package:kirmizi_defter/Authentication.dart';
 import 'package:lottie/lottie.dart';
-import 'package:kirmizidefter/kayitOl_sifreYenileme/ForgotPassword.dart';
-import 'package:kirmizidefter/kayitOl_sifreYenileme/SignUpScreen.dart';
+import 'package:kirmizi_defter/kayitOl_sifreYenileme/ForgotPassword.dart';
+import 'package:kirmizi_defter/kayitOl_sifreYenileme/SignUpScreen.dart';
 
 class SayfaBursa extends StatelessWidget {
   String user_email = "";

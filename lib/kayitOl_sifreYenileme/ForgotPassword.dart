@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:kirmizidefter/gecisEkranlari/sayfaBursa.dart';
+import 'package:kirmizi_defter/gecisEkranlari/sayfaBursa.dart';
 
 class ForgotPassword extends StatelessWidget {
   final TextEditingController _emailController = TextEditingController();

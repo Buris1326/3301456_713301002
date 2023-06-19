@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:kirmizi_defter/gecisEkranlari/noname.dart';
+import 'package:kirmizi_defter/gecisEkranlari/noname02.dart';
 import 'package:kirmizi_defter/gecisEkranlari/sayfaOlcu.dart';
 import 'package:kirmizi_defter/gecisEkranlari/sayfaTatlilar.dart';
 import 'package:kirmizi_defter/gecisEkranlari/sayfaTuzlular.dart';
 import 'package:kirmizi_defter/gecisEkranlari/tarifEkle.dart';
+
+import '../RecipeAdd.dart';
+import 'kiler.dart';
 
 
 
@@ -211,7 +216,69 @@ class SayfaKategori extends StatelessWidget {
                       color: Colors.black,
                     ),
                     const SizedBox(width: 10),
-                    const Text('DENEME001'),
+                    const Text('DENEME01'),
+                  ],
+                ),
+              ),
+
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => RecipesForm()),
+                  );
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.greenAccent, // Buton arka plan rengi
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 40),
+                  textStyle: const TextStyle(
+                    color: Colors.black, // Buton metin rengi
+                    fontSize: 18,
+                  ),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Icon(
+                      Icons.shopping_cart_outlined, // Kiler simgesi
+                      color: Colors.black,
+                    ),
+                    const SizedBox(width: 10),
+                    const Text('DENEME02'),
+                  ],
+                ),
+              ),
+
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => RecipesView()),
+                  );
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.greenAccent, // Buton arka plan rengi
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 40),
+                  textStyle: const TextStyle(
+                    color: Colors.black, // Buton metin rengi
+                    fontSize: 18,
+                  ),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Icon(
+                      Icons.shopping_cart_outlined, // Kiler simgesi
+                      color: Colors.black,
+                    ),
+                    const SizedBox(width: 10),
+                    const Text('DENEME03'),
                   ],
                 ),
               ),

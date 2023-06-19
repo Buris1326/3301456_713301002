@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:kirmizidefter/Authentication.dart';
-import 'package:kirmizidefter/gecisEkranlari/sayfaBursa.dart';
+import 'package:kirmizi_defter/Authentication.dart';
+import 'package:kirmizi_defter/gecisEkranlari/sayfaBursa.dart';
 
 class SignupScreen extends StatelessWidget {
 

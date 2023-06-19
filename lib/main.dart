@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:kirmizidefter/firebase_options.dart';
+import 'package:kirmizi_defter/firebase_options.dart';
 import 'gecisEkranlari/sayfaBursa.dart';
 
 void main() async {
