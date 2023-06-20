@@ -116,8 +116,8 @@ class _RecipesFormState extends State<RecipesForm> {
                 children: [
                   TextFormField(
                     decoration: InputDecoration(
-                      labelText: 'Yemek Tarifi Adı',
-                    ),
+                      labelText: 'Yemek Tarifi Adı',),
+
                     validator: (value) {
                       if (value!.isEmpty) {
                         return 'Lütfen yemek tarifi adını girin.';

@@ -3,12 +3,10 @@ import 'package:kirmizi_defter/models/recipes.dart';
 import 'package:kirmizi_defter/providers/recipes_provider.dart';
 import 'package:provider/provider.dart';
 
-
-
 class EditRecipesView extends StatefulWidget {
-  final Recipes? domainfirm;
+  final Recipes? recipe;
 
-  EditRecipesView([this.domainfirm]);
+  EditRecipesView([this.recipe]);
 
   @override
   _EditRecipesViewState createState() => _EditRecipesViewState();
@@ -31,28 +29,28 @@ class _EditRecipesViewState extends State<EditRecipesView> {
 
   @override
   void initState() {
-    if (widget.domainfirm == null) {
-      //New Record
+    if (widget.recipe == null) {
+      // New Record
       nameController.text = "";
       ingredientsController.text = "";
       makeController.text = "";
       clueController.text = "";
       new Future.delayed(Duration.zero, () {
         final recipesProvider =
-        Provider.of<RecipesProvider>(context, listen: false);
+            Provider.of<RecipesProvider>(context, listen: false);
         recipesProvider.loadValues(Recipes());
       });
     } else {
-      //Controller Update
-      nameController.text = widget.domainfirm!.name!;
-      ingredientsController.text = widget.domainfirm!.ingredients!;
-      makeController.text = widget.domainfirm!.make!;
-      clueController.text = widget.domainfirm!.clue!;
-      //State Update
+      // Controller Update
+      nameController.text = widget.recipe?.name ?? "";
+      ingredientsController.text = widget.recipe?.ingredients ?? "";
+      makeController.text = widget.recipe?.make ?? "";
+      clueController.text = widget.recipe?.clue ?? "";
+      // State Update
       new Future.delayed(Duration.zero, () {
         final recipesProvider =
-        Provider.of<RecipesProvider>(context, listen: false);
-        recipesProvider.loadValues(widget.domainfirm!);
+            Provider.of<RecipesProvider>(context, listen: false);
+        recipesProvider.loadValues(widget.recipe!);
       });
     }
 
@@ -65,38 +63,68 @@ class _EditRecipesViewState extends State<EditRecipesView> {
 
     return Scaffold(
       appBar: AppBar(
-          title: (widget.domainfirm != null)
-              ? Text('Edit Domain Firm')
-              : Text('Add Domain Firm')),
-      body: Padding(
-        padding: const EdgeInsets.all(8.0),
+        title: Text('Yeni Yemek Tarifi Ekle'),
+      ),
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            colors: [Color(0xFF536976), Color(0xFF292E49)],
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+          ),
+        ),
         child: ListView(
           children: <Widget>[
-            TextField(
+            TextFormField(
               controller: nameController,
-              decoration: InputDecoration(hintText: 'Domain Firm Name'),
+              decoration: InputDecoration(
+                labelText: 'Yemek Tarifi Adı',
+              ),
+              validator: (value) {
+                if (value!.isEmpty) {
+                  return 'Lütfen yemek tarifi adını girin.';
+                }
+                return null;
+              },
               onChanged: (value) {
                 recipesProvider.changeName(value);
               },
             ),
-            TextField(
+            SizedBox(height: 16.0),
+            Text('Malzemeler', style: TextStyle(fontSize: 16.0)),
+            SizedBox(height: 8.0),
+
+            //Buraya başka değişiklikler yapılabilir
+
+            TextFormField(
               controller: ingredientsController,
-              decoration: InputDecoration(hintText: 'Domain Firm Login Name'),
+              autofocus: true,
+              decoration: InputDecoration(hintText: 'Malzemeler'),
               onChanged: (value) {
                 recipesProvider.changeIngredients(value);
               },
             ),
-            TextField(
+
+            SizedBox(height: 16.0),
+            Text('Yapılışı', style: TextStyle(fontSize: 16.0)),
+            SizedBox(height: 8.0),
+
+            TextFormField(
               controller: makeController,
-              decoration:
-              InputDecoration(hintText: 'Domain Firm Login Password'),
+              decoration: InputDecoration(labelText: 'Adım Ekle'),
               onChanged: (value) {
                 recipesProvider.changeMake(value);
               },
             ),
-            TextField(
+
+            SizedBox(height: 16.0),
+            Text('İpuçları', style: TextStyle(fontSize: 16.0)),
+            SizedBox(height: 8.0),
+
+            TextFormField(
+              autofocus: true,
               controller: clueController,
-              decoration: InputDecoration(hintText: 'Domain Firm clue'),
+              decoration: InputDecoration(labelText: 'İpucu Ekle'),
               onChanged: (value) {
                 recipesProvider.changeClue(value);
               },
@@ -111,14 +139,18 @@ class _EditRecipesViewState extends State<EditRecipesView> {
                 Navigator.of(context).pop();
               },
             ),
-            (widget.domainfirm != null)
+            (widget.recipe != null)
                 ? ElevatedButton(
               child: Text('Delete'),
               onPressed: () {
-                recipesProvider.removeRecipe(widget.domainfirm!.id!);
+                if (widget.recipe?.id != null) {
+                  final recipesProvider = Provider.of<RecipesProvider>(context, listen: false);
+                  recipesProvider.removeRecipe(widget.recipe!.id!);
+                }
                 Navigator.of(context).pop();
               },
             )
+
                 : Container(),
           ],
         ),

@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:kirmizi_defter/functions/navigationFunction.dart';
@@ -15,7 +16,7 @@ class RecipesView extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text('Tarifler'),
+        title: Text('Tarfiler'),
         automaticallyImplyLeading: false,
         backgroundColor: Colors.blue,
         actions: <Widget>[
@@ -44,31 +45,24 @@ class RecipesView extends StatelessWidget {
             );
           }
 
-          if (recipes == null || recipes.isEmpty) {
-            return Center(
-              child: Text('Tarif bulunamadı.'),
-            );
-          }
-
           return ListView.builder(
-            itemCount: recipes.length,
+            itemCount: recipes?.length ?? 0,
             itemBuilder: (context, index) {
-              final recipe = recipes[index];
-
               return ListTile(
                 leading: Icon(
                   Icons.beach_access,
                   color: Colors.blue,
                   size: 36.0,
                 ),
-                title: Text(recipe.name ?? ''),
-                subtitle: Text(recipe.ingredients ?? ''),
-                trailing: Text(recipe.clue ?? ''),
+                title: Text(recipes![index].name!),
+                subtitle: Text(recipes![index].ingredients!),
+                trailing: Text(recipes![index].clue!),
                 isThreeLine: true,
                 onTap: () {
                   Navigator.of(context).push(
                     MaterialPageRoute(
-                      builder: (context) => EditRecipesView(recipe),
+                      builder: (context) =>
+                          EditRecipesView(recipes[index]),
                     ),
                   );
                 },
@@ -80,3 +74,4 @@ class RecipesView extends StatelessWidget {
     );
   }
 }
+

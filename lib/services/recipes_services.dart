@@ -16,15 +16,21 @@ class FirestoreRecipesService {
   }
 
   Stream<List<Recipes>> getRecipes() {
-    return _db.collection('recipes').snapshots().map((snapshot) => snapshot
+    return _db.collection('Recipes').snapshots().map((snapshot) => snapshot
         .docs
         .map((document) => Recipes.fromFirestore(document.data()))
         .toList());
   }
 
 
-  Future<void> removeRecipe(String id) {
-    return _db.collection('recipes').doc(id).delete();
+
+  Future<void> removeRecipe(String recipeId) async {
+    try {
+      await FirebaseFirestore.instance.collection('recipes').doc(recipeId).delete();
+      // İstenirse başka işlemler yapılabilir veya veri yeniden yüklenerek UI güncellenebilir
+    } catch (error) {
+      print("başarısız deneme");
+    }
   }
 
 }
