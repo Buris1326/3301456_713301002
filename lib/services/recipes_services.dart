@@ -24,13 +24,8 @@ class FirestoreRecipesService {
 
 
 
-  Future<void> removeRecipe(String recipeId) async {
-    try {
-      await FirebaseFirestore.instance.collection('recipes').doc(recipeId).delete();
-      // İstenirse başka işlemler yapılabilir veya veri yeniden yüklenerek UI güncellenebilir
-    } catch (error) {
-      print("başarısız deneme");
-    }
+  Future<void> removeRecipe(String id) {
+    return _db.collection('Recipes').doc(id).delete();
   }
 
 }

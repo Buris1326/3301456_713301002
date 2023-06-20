@@ -1,3 +1,4 @@
+/*
 import 'package:flutter/material.dart';
 import 'package:kirmizi_defter/services/recipes_services.dart';
 import 'package:uuid/uuid.dart';
@@ -249,3 +250,4 @@ class _RecipesFormState extends State<RecipesForm> {
         ));
   }
 }
+*/

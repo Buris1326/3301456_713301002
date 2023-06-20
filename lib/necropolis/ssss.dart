@@ -1,5 +1,5 @@
 
-import 'package:flutter/material.dart';
+/*import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:kirmizi_defter/functions/navigationFunction.dart';
 import 'package:kirmizi_defter/gecisEkranlari/editiRecipesView.dart';
@@ -74,4 +74,8 @@ class RecipesView extends StatelessWidget {
     );
   }
 }
+
+
+
+ */
 

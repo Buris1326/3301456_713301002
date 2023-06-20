@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:kirmizi_defter/gecisEkranlari/noname.dart';
+//import 'package:kirmizi_defter/gecisEkranlari/noname.dart';
 import 'package:kirmizi_defter/gecisEkranlari/noname02.dart';
 import 'package:kirmizi_defter/gecisEkranlari/sayfaOlcu.dart';
 import 'package:kirmizi_defter/gecisEkranlari/sayfaTatlilar.dart';
 import 'package:kirmizi_defter/gecisEkranlari/sayfaTuzlular.dart';
 import 'package:kirmizi_defter/gecisEkranlari/tarifEkle.dart';
 
-import '../RecipeAdd.dart';
+//import '../RecipeAdd.dart';
 import 'kiler.dart';
 
 
@@ -190,7 +190,7 @@ class SayfaKategori extends StatelessWidget {
                   ],
                 ),
               ),
-              ElevatedButton(
+              /*ElevatedButton(
                 onPressed: () {
                   Navigator.push(
                     context,
@@ -221,7 +221,9 @@ class SayfaKategori extends StatelessWidget {
                 ),
               ),
 
-              ElevatedButton(
+               */
+
+              /*ElevatedButton(
                 onPressed: () {
                   Navigator.push(
                     context,
@@ -250,7 +252,7 @@ class SayfaKategori extends StatelessWidget {
                     const Text('DENEME02'),
                   ],
                 ),
-              ),
+              ),*/
 
               ElevatedButton(
                 onPressed: () {

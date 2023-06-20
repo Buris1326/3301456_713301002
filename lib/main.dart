@@ -34,12 +34,11 @@ class MyApp extends StatelessWidget {
             create: (_) => FirestoreRecipesService(),
           ),
           ChangeNotifierProvider(create: (context) => RecipesProvider()),
-          StreamProvider(
-            create: (context) =>
+          StreamProvider(create: (context) =>
                 context.read<FirestoreRecipesService>().getRecipes(),
             initialData: null,
           ),
-          //ChangeNotifierProvider(create: (context) => SayfaBursa()),
+          //ChangeNotifierProvider(create: (context) => MenuDrawerNotifier()),
         ],
         child: MaterialApp(
          // localizationsDelegates: context.localizationDelegates,
