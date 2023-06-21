@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:kirmizi_defter/gecisEkranlari/gallery/mixed.dart';
+
 //import 'package:kirmizi_defter/gecisEkranlari/noname.dart';
 import 'package:kirmizi_defter/gecisEkranlari/noname02.dart';
 import 'package:kirmizi_defter/gecisEkranlari/sayfaOlcu.dart';
 import 'package:kirmizi_defter/gecisEkranlari/sayfaTatlilar.dart';
 import 'package:kirmizi_defter/gecisEkranlari/sayfaTuzlular.dart';
 import 'package:kirmizi_defter/gecisEkranlari/tarifEkle.dart';
+import 'package:kirmizi_defter/graphic/LineChartSample2State.dart';
 
 //import '../RecipeAdd.dart';
 import 'kiler.dart';
-
-
 
 class SayfaKategori extends StatelessWidget {
   @override
@@ -38,17 +39,17 @@ class SayfaKategori extends StatelessWidget {
             children: <Widget>[
               ElevatedButton(
                 onPressed: () {
-                  Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(builder: (context) => SayfaTatlilar())
-                  );
+                  Navigator.pushReplacement(context,
+                      MaterialPageRoute(builder: (context) => SayfaTatlilar()));
                 },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.deepPurpleAccent, // Buton arka plan rengi
+                  backgroundColor: Colors.deepPurpleAccent,
+                  // Buton arka plan rengi
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 40),
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 16, horizontal: 40),
                   textStyle: const TextStyle(
                     color: Colors.white, // Buton metin rengi
                     fontSize: 18,
@@ -79,7 +80,8 @@ class SayfaKategori extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 40),
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 16, horizontal: 40),
                   textStyle: const TextStyle(
                     color: Colors.white, // Buton metin rengi
                     fontSize: 18,
@@ -110,7 +112,8 @@ class SayfaKategori extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 40),
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 16, horizontal: 40),
                   textStyle: const TextStyle(
                     color: Colors.black, // Buton metin rengi
                     fontSize: 18,
@@ -141,7 +144,8 @@ class SayfaKategori extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 40),
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 16, horizontal: 40),
                   textStyle: const TextStyle(
                     color: Colors.white, // Buton metin rengi
                     fontSize: 18,
@@ -172,7 +176,8 @@ class SayfaKategori extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 40),
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 16, horizontal: 40),
                   textStyle: const TextStyle(
                     color: Colors.black, // Buton metin rengi
                     fontSize: 18,
@@ -266,7 +271,8 @@ class SayfaKategori extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 40),
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 16, horizontal: 40),
                   textStyle: const TextStyle(
                     color: Colors.black, // Buton metin rengi
                     fontSize: 18,
@@ -281,6 +287,68 @@ class SayfaKategori extends StatelessWidget {
                     ),
                     const SizedBox(width: 10),
                     const Text('DENEME03'),
+                  ],
+                ),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => WatermelonChart()),
+                  );
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.greenAccent, // Buton arka plan rengi
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 16, horizontal: 40),
+                  textStyle: const TextStyle(
+                    color: Colors.black, // Buton metin rengi
+                    fontSize: 18,
+                  ),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Icon(
+                      Icons.shopping_cart_outlined, // Kiler simgesi
+                      color: Colors.black,
+                    ),
+                    const SizedBox(width: 10),
+                    const Text('DENEME04'),
+                  ],
+                ),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Mixed()),
+                  );
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.greenAccent, // Buton arka plan rengi
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  padding:
+                  const EdgeInsets.symmetric(vertical: 16, horizontal: 40),
+                  textStyle: const TextStyle(
+                    color: Colors.black, // Buton metin rengi
+                    fontSize: 18,
+                  ),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Icon(
+                      Icons.shopping_cart_outlined, // Kiler simgesi
+                      color: Colors.black,
+                    ),
+                    const SizedBox(width: 10),
+                    const Text('DENEME05'),
                   ],
                 ),
               ),
